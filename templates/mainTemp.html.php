@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon shortcut" type="image/icon" href="images/Logo.ico">
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="icon shortcut" type="image/icon" href="ClotheLineBW.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>ClotheLine</title>
+    <title><?=$title?></title>
 </head>
 
 <body id="clicked" class="home">
@@ -133,7 +133,7 @@
                 </li>
                 <li></li>
                 <li></li>
-                <a href="index.html"><img src="images/ClotheLineLogoColour.jpeg" alt="Logo" class=logo></a>
+                <a href="index.php"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
                 <li></li>
                 <li></li>
                 <form action="/search" method="get" class="searchbar">
@@ -142,8 +142,12 @@
                 </form>
         </ul>
     </nav>
-    <main class="index">
+    <main class="main">
+        <?=$output?>
     </main>
+    <footer>
+        &copy; ClotheLine sample footer <?=date('Y');?>
+    </footer>
 </body>
 
 </html>
