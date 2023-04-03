@@ -140,6 +140,8 @@
                     <input type="text" name="q" placeholder="Search...">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
+                <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
+                <a href="account.php"><img src="acc.png" alt="account" class="acc"></a>
         </ul>
     </nav>
     <main class="main">
