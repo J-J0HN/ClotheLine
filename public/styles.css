@@ -70,7 +70,13 @@ nav ul ul ul {
     margin-top: -3em;
 }
 
+.searchbar > *{
+    position: absolute;
+    right: 0;
+}
+
 .searchbar {
+    position: relative;
     display: flex;
     width: 25em;
     margin: 0 auto;
