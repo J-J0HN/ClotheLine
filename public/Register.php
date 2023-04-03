@@ -1,48 +1,62 @@
 <?php
 require '../pdo.php';
 require '../functions.php';
-$title='ClotheLine';
+$title = 'ClotheLine';
 
-$output = loadTemplate('../templates/index.html.php',[]);
+if (isset($_POST['submit'])) {
+    $stmt = $pdo->prepare("INSERT INTO user (Firstname, Lastname, username, email, password)
+        VALUES (:Firstname, :Lastname, :username, :email, :password)");
+    $values = [
+        'Firstname' => $_POST['Firstname'],
+        'Lastname' => $_POST['Lastname'],
+        'username' => $_POST['username'],
+        'email' => $_POST['email'],
+        'password' => sha1($_POST['password']),
+    ];
+    $stmt->execute($values);
+    $user_registered = true; // set flag to true
 
-require '../templates/mainTemp.html.php';
+    $users = $pdo->prepare('SELECT * FROM user WHERE email = :email');
+    $values = [
+        'email' => $_POST['email']
+    ];
+    $users->execute($values);
 
-if (isset($_POST['submit'])) 
-{
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    
-    // Validate if email exists
-    $emailCheck = $pdo->query("SELECT * FROM user WHERE email='$email'");
-    if($emailCheck) {
-        echo "Email aready in use";
-    }
-    else {        
-        $stmt = $pdo->prepare("INSERT INTO user (username,email, password)
-            VALUES (:username, :email, :password)
-        ");
-        $values = [
-            'username'     => $username,
-            'email'         => $email,
-            'password'      => sha1($password),
-        ];
-        $stmt->execute($values);
-
-        echo "Account created successfully";
-    }
+    $user = $users->fetch();
+    $_SESSION['login'] = $user['userid'];
+    $_SESSION['username'] = $user['username'];
 }
-?>
 
-<form action="" method="post">
+$output = '
+<div class="title-container">
+  <h1>Account Details</h1>
+</div>
+<div class="form-container">
+  <form action="" method="POST">
+
+  <label for="Firstname">Firstname:</label>
+    <input type="text" name="Firstname" id="Firstname" placeholder="Enter your Firstname" required>
+
+    <label for="Lastname">Lastname:</label>
+    <input type="text" name="Lastname" id="Lastname" placeholder="Enter your Lastname" required>
+    
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required placeholder="Enter your username"><br>
+    <input type="text" name="username" id="username" placeholder="Enter your username" required>
 
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required placeholder="Enter your password"><br>
+    <input type="password" name="password" id="password" placeholder="Enter your password" required>
 
-    <input type="submit" name="submit" value="Register">
-</form>
+    <button type="submit" name="submit" class="register-btn">Register</button>
+  </form>
+</div>';
+
+// check if user has registered and display link if true
+if (isset($user_registered)) {
+    $output .= '<p>You have registered!</p>';
+    $output .= '<a href="login.php" class="back-home">Go To Login</a>';
+}
+
+require '../templates/mainTemp.html.php';
