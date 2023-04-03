@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles.css"/>
     <link rel="icon shortcut" type="image/icon" href="ClotheLineBW.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/scripts/script.js"></script>
     <title><?=$title?></title>
 </head>
 
