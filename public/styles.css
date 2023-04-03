@@ -36,7 +36,8 @@ nav>ul>li {
 }
 
 nav ul ul {
-    position: absolute;
+    position: relative;
+    left: 0;
     background-color: #1A4570;
     padding: 0;
     display: block;
