@@ -131,11 +131,7 @@
                         </li>
                     </ul>
                 </li>
-                <li></li>
-                <li></li>
                 <a href="index.php"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
-                <li></li>
-                <li></li>
                 <form action="/search" method="get" class="searchbar">
                     <input type="text" name="q" placeholder="Search...">
                     <button type="submit"><i class="fa fa-search"></i></button>
