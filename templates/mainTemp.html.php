@@ -131,18 +131,16 @@
                         </li>
                     </ul>
                 </li>
-                <li></li>
-                <li></li>
                 <a href="index.php"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
-                <li></li>
-                <li></li>
                 <form action="/search" method="get" class="searchbar">
                     <input type="text" name="q" placeholder="Search...">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
-                <a href="account.php"><img src="acc.png" alt="account" class="acc"></a>
-        </ul>
+                <li><a href="#" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon"><ul>
+                <li><a href="login.php">Log-in</a></li>
+                <li><a href="register.php">Sign-up</a></li>
+                </ul>
     </nav>
     <main class="main">
         <?=$output?>
