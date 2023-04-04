@@ -15,10 +15,10 @@
     <nav class="navigation">
         <ul>
             <li>
-                <a href="category.html" class="All">All</a>
+                <a href="category.php?f=" class="All">All</a>
             </li>
             <li>
-                <a href="#" class="Womens">Women's</a>
+                <a href="category.php?f='women'" class="Womens">Women's</a>
                 <ul>
                     <li>
                         <a href="category.html" class="Jackets">Jackets</a>
