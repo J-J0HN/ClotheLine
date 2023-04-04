@@ -137,8 +137,10 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
-                <a href="account.php"><img src="acc.png" alt="account" class="acc"></a>
-        </ul>
+                <li><a href="#" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon"><ul>
+                <li><a href="#">Log-in</a></li>
+                <li><a href="#">Sign-up</a></li>
+                </ul>
     </nav>
     <main class="main">
         <?=$output?>

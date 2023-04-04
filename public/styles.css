@@ -53,6 +53,18 @@ nav>ul>li:hover ul {
     display: block;
 }
 
+nav ul ul {
+    position: absolute;
+    left: 0;
+    background-color: #1A4570;
+    padding: 0;
+    display: none;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
 nav ul ul li {
     display: block;
     font-size: small;
@@ -121,7 +133,25 @@ footer {
     font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif;
 }
 
-.acc,
+.acc ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.acc ul li {
+    width: 100%;
+}
+
+.acc ul li a {
+    display: block;
+    padding: 10px;
+}
+
+.acc ul li a:hover {
+    background-color: #3a3a3a;
+}
+
 .cart {
     height: 2em;
 }
