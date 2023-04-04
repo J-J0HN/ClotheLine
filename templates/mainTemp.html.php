@@ -138,8 +138,8 @@
                 </form>
                 <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
                 <li><a href="#" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon"><ul>
-                <li><a href="#">Log-in</a></li>
-                <li><a href="#">Sign-up</a></li>
+                <li><a href="login.php">Log-in</a></li>
+                <li><a href="register.php">Sign-up</a></li>
                 </ul>
     </nav>
     <main class="main">
