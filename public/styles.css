@@ -195,6 +195,7 @@ input {
     transition: background-color 0.3s ease-in-out;
 }
 
+
 .register-btn:hover {
     background-color: #1A4570; 
     border-color: #023e8a;
