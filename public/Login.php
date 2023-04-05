@@ -22,22 +22,9 @@ if (isset($_POST['submit'])) {
     }
 }
 
-$output = '
-<div class="title-container">
-  <h1>Login</h1>
-</div>
-<div class="form-container">
-  <form action="" method="POST">
-
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" placeholder="Enter your email" required>
-
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" placeholder="Enter your password" required>
-
-    <button type="submit" name="submit" class="login-btn">Login</button>
-  </form>
-</div>';
+ob_start();
+include '../templates/Login.html.php';
+$output = ob_get_clean();
 
 if (isset($message)) {
     $output .= "<p>{$message}</p>";
@@ -46,4 +33,6 @@ if (isset($message)) {
     $output .= "<p>You have successfully logged in!</p>";
 }
 
-require '../templates/mainTemp.html.php';
+ob_start();
+include '../templates/mainTemp.html.php';
+echo ob_get_clean();
