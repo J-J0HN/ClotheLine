@@ -88,6 +88,7 @@ nav ul ul ul {
     width: 25em;
     margin: 0 auto;
     height: 2em;
+    position: relative;
 }
 
 .searchbar input[type="text"] {
@@ -107,6 +108,8 @@ nav ul ul ul {
     cursor: pointer;
     border-top-right-radius: 0.35em;
     border-bottom-right-radius: 0.35em;
+    position: absolute;
+    right: 0;
 }
 
 .searchbar button[type="submit"]:hover {
