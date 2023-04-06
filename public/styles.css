@@ -33,8 +33,7 @@ nav ul {
 nav>ul>li {
     position: relative;
     font-size: small;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+    width: 5vw;
 }
 
 nav ul ul {
@@ -45,50 +44,41 @@ nav ul ul {
     display: block;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease-in;
-    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
 }
 
-nav>ul>li:hover ul {
+nav>ul>li:hover>ul {
     opacity: 1;
     pointer-events: auto;
     display: block;
-}
-
-nav ul ul {
-    position: absolute;
-    left: 0;
-    background-color: #1A4570;
-    padding: 0;
-    display: none;
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-    opacity: 0;
-    pointer-events: none;
 }
 
 nav ul ul li {
     display: block;
     font-size: small;
     position: relative;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    transition: background-color 0.25s ease-in-out;
 }
 
 nav ul ul ul {
     position: absolute;
     left: 100%;
     top: 0;
+    display: none;
+}
+
+nav ul ul li:hover {
+    background-color: #4c7daf;
 }
 
 .logo {
     width: 9em;
     height: 7em;
     margin-top: -3em;
-    margin-left: 11vw;
-    margin-right: 6.5vw;
+    margin-left: 8.5vw;
+    margin-right: 5.5vw;
 }
 
 .searchbar {
@@ -96,7 +86,6 @@ nav ul ul ul {
     width: 25em;
     margin: 0 auto;
     height: 2em;
-    margin-left: 2vw;
 }
 
 .searchbar input[type="text"] {
