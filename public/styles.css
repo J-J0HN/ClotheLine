@@ -33,6 +33,8 @@ nav ul {
 nav>ul>li {
     position: relative;
     font-size: small;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 nav ul ul {
@@ -69,8 +71,6 @@ nav ul ul li {
     display: block;
     font-size: small;
     position: relative;
-    margin-left: 1vw;
-    margin-right: 1vw;
 }
 
 nav ul ul ul {
