@@ -146,7 +146,21 @@
         <?=$output?>
     </main>
     <footer>
-        &copy; ClotheLine sample footer <?=date('Y');?>
+        <h1>OUR SOCIALS</h1>
+        <a href="#"><img src="fb.png" alt="FaceBook" class ="facebook"></a>
+        <a href="#"><img src="twt.png" alt="Twitter" class ="twitter"></a>
+        <a href="#"><img src="pin.png" alt="Pinterest" class ="pinterest"></a>
+        <a href="#"><img src="insta.png" alt="Instagram" class ="instagram"></a>
+        <h1>NEWSLETTERS</h1>
+        <h1>NEED MORE HELP?</h1>
+        <p>01504123456</p>
+        <p>info@clotheline.com</p>
+	<div class="newsletter">
+		<form>
+			<input type="email" id="email" name="email" placeholder="Email Address" required>
+			<button type="submit">Subscribe Now</button>
+		</form>
+    <p class="tag">&copy; by ClotheLine Ltd <?php echo date('Y'); ?></p>
     </footer>
 </body>
 
