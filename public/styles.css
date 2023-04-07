@@ -155,3 +155,24 @@ footer {
     margin-left: 3.5vw;
     margin-right: 2.5vw;
 }
+
+
+/* .cart {
+    display: inline-block;
+    position: relative;
+    }
+    
+    .cart-count {
+    background-color: #f00;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    right: -8px;
+    text-align: center;
+    top: -8px;
+    width: 16px;
+    } */
