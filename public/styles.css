@@ -154,33 +154,86 @@ main {
 /* footer section ----------------------------------------------------------------------------------------------------------------------------------------- */
 
 footer {
-    position: relative;
     background-color: #1A4570;
     padding: 10px;
     color: white;
     min-height: 20vh;
     justify-content: center;
     font-family: Arial, 'Helvetica', sans-serif;
-    grid-template-columns: repeat(3, 1fr);
 }
 
 footer h1 {
     font-family: Arial, 'Helvetica', sans-serif;
     font-size: medium;
     font-weight: 500;
+    display: inline;
+    margin: 0;
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
+.footerclass {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "square1 square2 square3";
+    justify-items: center;
+    align-items: center;
+}
+
+.footerclass section {
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+.p1 {
+    grid-area: square1;
+}
+
+.socials {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+
+.p2 {
+    grid-area: square2;
+}
+
+.newsletters {
+    position: absolute;
+    bottom: 10%;
+    left: 47.5%;
+}
+
+.p2 p {
+    position: absolute;
+    top: 103%;
+    left: 48%;
+    font-size: x-small;
+}
+
+.p3 {
+    grid-area: square3;
+}
+
+.contacts {
+    position: absolute;
+    bottom: 10%;
+    left: 80%;
 }
 
 .newsletter {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: #0b2b4b;
     border: 1px solid #000000;
     padding: 1vh 1vw;
+    left: 41%;
+    top: 88.5%;
 }
 
 footer form {
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -211,8 +264,4 @@ footer button[type="submit"] {
     margin: 0.5em 0;
     width: 100%;
     box-sizing: border-box;
-}
-
-.tag {
-    font-size: x-small;
 }
