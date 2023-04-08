@@ -159,9 +159,9 @@ footer {
     padding: 10px;
     color: white;
     min-height: 20vh;
-    display: flex;
     justify-content: center;
     font-family: Arial, 'Helvetica', sans-serif;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 footer h1 {
