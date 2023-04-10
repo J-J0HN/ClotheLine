@@ -18,51 +18,51 @@
                 <a href="category.php?f=" class="All">All</a>
             </li>
             <li>
-                <a href="category.php?f='women'" class="Womens">Women's</a>
+                <a href="category.php?f=women" class="Womens">Women's</a>
                 <ul>
                     <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
+                        <a href="category.php?f=wJackets" class="Jackets">Jackets</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                        <a href="category.php?f=wH&S" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Tops">Tops</a>
+                        <a href="category.php?f=wTops" class="Tops">Tops</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Shoes">Shoes</a>
+                        <a href="category.php?f=wShoes" class="Shoes">Shoes</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Trousers">Trousers</a>
+                        <a href="category.php?f=wTrousers" class="Trousers">Trousers</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Dresses">Dresses</a>
+                        <a href="category.php?f=wDresses" class="Dresses">Dresses</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Skirts">Skirts</a>
+                        <a href="category.php?f=wSkirts" class="Skirts">Skirts</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
+                        <a href="category.php?f=wJackets" class="Jackets">Jackets</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#" class="Mens">Men's</a>
+                <a href="category.php?f=men" class="Mens">Men's</a>
                 <ul>
                     <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
+                        <a href="category.php?f=mJackets" class="Jackets">Jackets</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                        <a href="category.php?f=mH&S" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Tops">Tops</a>
+                        <a href="category.php?f=mTops" class="Tops">Tops</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Shoes">Shoes</a>
+                        <a href="category.php?f=mShoes" class="Shoes">Shoes</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Trousers">Trousers</a>
+                        <a href="category.php?f=mTrousers" class="Trousers">Trousers</a>
                     </li>
                 </ul>
             </li>
@@ -112,7 +112,7 @@
                 </ul>
                 </li>
                 <li>
-                    <a href="#" class="Baby">Baby</a>
+                    <a href="category.php" class="Baby">Baby</a>
                     <ul>
                         <li>
                             <a href="category.html" class="Onesies">Onesies</a>

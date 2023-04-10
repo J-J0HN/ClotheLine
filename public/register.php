@@ -1,7 +1,7 @@
 <?php
 require '../pdo.php';
 require '../functions.php';
-$title = 'ClotheLine';
+$title = 'ClotheLine - Register';
 
 if (isset($_POST['submit'])) {
     $stmt = $pdo->prepare("INSERT INTO user (Firstname, Lastname, username, email, password)
