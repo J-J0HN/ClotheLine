@@ -1,9 +1,9 @@
 <div class="product-filter">
-  <h2>Filter Products</h2>
+  <h2 class="filter-heading">Filter Products</h2>
   <form>
     <div class="form-group">
       <label for="size">Size:</label>
-      <select id="size">
+      <select id="size" name="product[size]">
         <option value="">All sizes</option>
         <option value="S">S</option>
         <option value="M">M</option>
@@ -13,8 +13,8 @@
     </div>
     <div class="form-group">
       <label for="color">Color:</label>
-      <select id="color">
-        <option value="">All colors</option>
+      <select id="color" name="product[colour]">
+        <option value="">All colours</option>
         <option value="red">Red</option>
         <option value="green">Green</option>
         <option value="blue">Blue</option>
@@ -22,13 +22,26 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="price">Price:</label>
-      <input type="range" id="price" name="price" min="0" max="1000" value="500">
-      <output for="price" id="price-value">$500</output>
-    </div>
+  <label for="price">Price:</label>
+  <input type="range" id="price" name="product[price]" min="0" max="300" value="0" oninput="updatePriceValue(this.value)">
+  <output for="price" id="price-value">$0</output>
+</div>
     <button type="submit">Filter</button>
   </form>
 </div>
 
+<div class="products">
+    <h1 class="category-name"><?=$category['name'];?> </h1>
+    <?php
+    foreach($products as $product){
+        ?>
+    <div class="single-product"> 
+    <a href="product.php?id=<?=$product['prodid']?>"><img src="<?=$product['prodimg']?>" alt="<?=$product['prodname']?>" class="prodimage"></a>
+    <h3 class="prodname"><?=$product['prodname']?></h3>
+    <p class="prodprice">£<?=$product['prodprice']?></p>
+    </div>
+    <?
+    }
 
-<h1><?=$category['name'];?> Products</h1>
+?>
+</div>

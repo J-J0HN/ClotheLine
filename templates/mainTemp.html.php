@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css"/>
+    <script src="/script.js"></script>
     <link rel="icon shortcut" type="image/icon" href="ClotheLineBW.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title><?=$title?></title>
@@ -13,7 +14,7 @@
 
 <body id="clicked" class="home">
     <nav class="navigation">
-        <ul>
+        <ul class="nav">
             <li>
                 <a href="category.php?f=" class="All">All</a>
             </li>
@@ -133,11 +134,11 @@
                 </li>
                 <li></li>
                 <li></li>
-                <a href="index.php"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
+                <a href="index.php"class="logolink"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
                 <li></li>
                 <li></li>
                 <form action="/search" method="get" class="searchbar">
-                    <input type="text" name="q" placeholder="Search...">
+                    <input type="text" name="q" placeholder="Search..." class="searchbar">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
