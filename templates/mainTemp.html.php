@@ -19,7 +19,7 @@
                 <a href="category.php?f=" class="All">All</a>
             </li>
             <li>
-                <a href="category.php?f=women" class="Womens">Women's</a>
+                <a href="category.php?f=women" class="Womens">Womens</a>
                 <ul>
                     <li>
                         <a href="category.php?f=wJackets" class="Jackets">Jackets</a>
@@ -48,7 +48,7 @@
                 </ul>
             </li>
             <li>
-                <a href="category.php?f=men" class="Mens">Men's</a>
+                <a href="category.php?f=men" class="Mens">Mens</a>
                 <ul>
                     <li>
                         <a href="category.php?f=mJackets" class="Jackets">Jackets</a>
@@ -68,7 +68,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="Boys">Boy's</a>
+                <a href="#" class="Boys">Boys</a>
                 <ul>
                     <li>
                         <a href="category.html" class="Jackets">Jackets</a>
@@ -91,7 +91,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="Girls">Girl's</a>
+                <a href="#" class="Girls">Girls</a>
                 <ul>
                     <li>
                         <a href="category.html" class="Jackets">Jackets</a>
@@ -113,7 +113,7 @@
                 </ul>
                 </li>
                 <li>
-                    <a href="category.php" class="Baby">Baby</a>
+                    <a href="category.php" class="Baby">Babies</a>
                     <ul>
                         <li>
                             <a href="category.html" class="Onesies">Onesies</a>
