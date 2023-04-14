@@ -2,14 +2,13 @@
 
 require '../pdo.php';
 require '../functions.php';
-$title = 'ClotheLine';
 
-$category=find($pdo, 'category', '')
+$category=find($pdo, 'category', 'name', $_GET['f']);
 
+$categories=findAll($pdo, 'category');
 
+$title= "Clotheline - " . $category['name'];
 
-
-
-
+$products = find($pdo, 'products', 'category', $_GET['f']);
 
 ?>
