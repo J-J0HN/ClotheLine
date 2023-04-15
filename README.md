@@ -6,5 +6,3 @@ Joyal John,
 Daniel Nassif,
 Nana O Boateng,
 Khalid Osemi.
-
-Live at https://j0yalj0hn.github.io/ClotheLine/
