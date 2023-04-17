@@ -3,6 +3,7 @@ require '../pdo.php';
 require '../functions.php';
 
 $title = 'ClotheLine';
+$mainClass='registerMain';
 
 if (isset($_POST['submit'])) {
     $values = [

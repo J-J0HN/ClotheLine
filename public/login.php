@@ -3,6 +3,7 @@ require '../pdo.php';
 require '../functions.php';
 
 $title = 'ClotheLine';
+$mainClass='loginMain';
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
