@@ -47,6 +47,7 @@ nav ul ul {
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  z-index: 1;
 }
 
 nav > ul > li:hover > ul {
