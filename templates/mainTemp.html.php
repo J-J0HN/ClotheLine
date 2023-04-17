@@ -13,62 +13,62 @@
 </head>
 
 <body id="clicked" class="home">
-    <nav class="navigation">
-        <ul>
+<nav class="navigation">
+        <ul class="nav">
             <li>
-                <a href="category.html" class="All">All</a>
+                <a href="category.php?f=" class="All">All</a>
             </li>
             <li>
-                <a href="#" class="Womens">Women's</a>
+                <a href="category.php?f=women" class="Womens">Womens</a>
                 <ul>
                     <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
+                        <a href="category.php?f=wJackets" class="Jackets">Jackets</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                        <a href="category.php?f=wH&S" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Tops">Tops</a>
+                        <a href="category.php?f=wTops" class="Tops">Tops</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Shoes">Shoes</a>
+                        <a href="category.php?f=wShoes" class="Shoes">Shoes</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Trousers">Trousers</a>
+                        <a href="category.php?f=wTrousers" class="Trousers">Trousers</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Dresses">Dresses</a>
+                        <a href="category.php?f=wDresses" class="Dresses">Dresses</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Skirts">Skirts</a>
+                        <a href="category.php?f=wSkirts" class="Skirts">Skirts</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
+                        <a href="category.php?f=wJackets" class="Jackets">Jackets</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#" class="Mens">Men's</a>
+                <a href="category.php?f=men" class="Mens">Mens</a>
                 <ul>
                     <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
+                        <a href="category.php?f=mJackets" class="Jackets">Jackets</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                        <a href="category.php?f=mH&S" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Tops">Tops</a>
+                        <a href="category.php?f=mTops" class="Tops">Tops</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Shoes">Shoes</a>
+                        <a href="category.php?f=mShoes" class="Shoes">Shoes</a>
                     </li>
                     <li>
-                        <a href="category.html" class="Trousers">Trousers</a>
+                        <a href="category.php?f=mTrousers" class="Trousers">Trousers</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#" class="Boys">Boy's</a>
+                <a href="#" class="Boys">Boys</a>
                 <ul>
                     <li>
                         <a href="category.html" class="Jackets">Jackets</a>
@@ -91,7 +91,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="Girls">Girl's</a>
+                <a href="#" class="Girls">Girls</a>
                 <ul>
                     <li>
                         <a href="category.html" class="Jackets">Jackets</a>
@@ -113,7 +113,7 @@
                 </ul>
                 </li>
                 <li>
-                    <a href="#" class="Baby">Baby</a>
+                    <a href="category.php" class="Baby">Babies</a>
                     <ul>
                         <li>
                             <a href="category.html" class="Onesies">Onesies</a>
@@ -132,16 +132,30 @@
                         </li>
                     </ul>
                 </li>
-                <a href="index.php"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
+                <li></li>
+                <li></li>
+                <a href="index.php"class="logolink"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
+                <li></li>
+                <li></li>
                 <form action="/search" method="get" class="searchbar">
-                    <input type="text" name="q" placeholder="Search...">
+                    <input type="text" name="q" placeholder="Search..." class="searchbar">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
-                <li><a href="#" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon"><ul>
-                <li><a href="login.php">Log-in</a></li>
-                <li><a href="register.php">Sign-up</a></li>
-                </ul>
+                <li>
+                    <a href="login.php" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon">
+                        <ul>
+                        <?php
+                    if (isset($_SESSION['username'])) {
+                        echo "<li><a href='#'>" . $_SESSION['username'] . "</a></li>";
+                        echo "<li><a href='logout.php'>Log out</a></li>";
+                    } else {
+                        echo "<li><a href='login.php'>Log-in</a></li>";
+                        echo "<li><a href='register.php'>Sign-up</a></li>";
+                    }
+                ?>
+                    </ul>
+                </a>
     </nav>
     <main class="main">
         <?=$output?>
