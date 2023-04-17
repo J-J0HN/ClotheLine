@@ -5,13 +5,18 @@ body {
     overflow-x: hidden;
 }
 
+.logolink {
+    height: 0;
+}
 
-/* navigation bar section ----------------------------------------------------------------------------------------------------------------------------------------- */
+.nav {
+    height: 0;
+}
 
 nav {
-    background-color: #1a4570;
+    background-color: #1A4570;
     color: rgb(255, 255, 255);
-    font-family: Segoe UI, "Tahoma", Geneva, Verdana, sans-serif;
+    font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif;
     padding-top: 2.5em;
     height: 6em;
     text-decoration: none;
@@ -21,7 +26,6 @@ nav {
 a {
     color: white;
     text-decoration: none;
-    font-family: Segoe UI, "Tahoma", Geneva, Verdana, sans-serif;
 }
 
 nav ul {
@@ -36,22 +40,23 @@ nav ul {
 nav>ul>li {
     position: relative;
     font-size: small;
-    width: 5vw;
+    height: 0;
 }
 
 nav ul ul {
     position: relative;
     left: 0;
-    background-color: #1a4570;
+    background-color: #1A4570;
     padding: 0;
     display: block;
     width: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in;
+    pointer-events: none;
     z-index: 1;
 }
 
-nav>ul>li:hover>ul {
+nav>ul>li:hover ul {
     opacity: 1;
     pointer-events: auto;
     display: block;
@@ -61,28 +66,18 @@ nav ul ul li {
     display: block;
     font-size: small;
     position: relative;
-    margin-top: 0.5vw;
-    margin-bottom: 0.5vw;
-    transition: background-color 0.25s ease-in-out;
 }
 
 nav ul ul ul {
     position: absolute;
     left: 100%;
     top: 0;
-    display: none;
-}
-
-nav ul ul li:hover {
-    background-color: #4c7daf;
 }
 
 .logo {
     width: 9em;
     height: 7em;
     margin-top: -3em;
-    margin-left: 9.75vw;
-    margin-right: 4.25vw;
 }
 
 .searchbar {
@@ -90,6 +85,7 @@ nav ul ul li:hover {
     width: 25em;
     margin: 0 auto;
     height: 2em;
+    position: relative;
 }
 
 .searchbar input[type="text"] {
@@ -99,6 +95,7 @@ nav ul ul li:hover {
     border-bottom-left-radius: 0.35em;
     border-top-left-radius: 0.35em;
     font-style: italic;
+    width: 290px;
 }
 
 .searchbar button[type="submit"] {
@@ -109,6 +106,8 @@ nav ul ul li:hover {
     cursor: pointer;
     border-top-right-radius: 0.35em;
     border-bottom-right-radius: 0.35em;
+    position: absolute;
+    right: 0;
 }
 
 .searchbar button[type="submit"]:hover {
