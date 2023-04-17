@@ -149,27 +149,31 @@
     <footer class="footerclass">
         <section class="p1">
         <h1 class="socials">OUR SOCIALS</h1>
-        <a href="#"><img src="fb.png" alt="FaceBook" class ="facebook"></a>
-        <a href="#"><img src="twt.png" alt="Twitter" class ="twitter"></a>
-        <a href="#"><img src="pin.png" alt="Pinterest" class ="pinterest"></a>
-        <a href="#"><img src="insta.png" alt="Instagram" class ="instagram"></a>
+        <div class="social-links">
+            <a href="#"><img src="fb.png" alt="FaceBook" class ="facebook"></a>
+            <a href="#"><img src="twt.png" alt="Twitter" class ="twitter"></a>
+            <a href="#"><img src="pin.png" alt="Pinterest" class ="pinterest"></a>
+            <a href="#"><img src="insta.png" alt="Instagram" class ="instagram"></a>
+        </div>
         </section>
 
         <section class="p2">
-        <h1 class="newsletters">NEWSLETTERS</h1>
-        <div class="newsletter">
-		<form>
-			<input type="email" id="email" name="email" placeholder="Email Address" required>
-			<button type="submit">Subscribe Now</button>
-		</form>
-    </div>
-    <p>&copy; by ClotheLine Ltd <?php echo date('Y'); ?></p>
+            <h1 class="newsletters">NEWSLETTERS</h1>
+            <div class="newsletter">
+                <form>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div>
+            <p>&copy; by ClotheLine Ltd <?php echo date('Y'); ?></p>
         </section>
 
         <section class="p3">
         <h1 class="contacts">NEED MORE HELP?</h1>
-        <p>01504123456</p>
-        <p>info@clotheline.com</p>
+        <div>
+            <p>01504123456</p>
+            <p>info@clotheline.com</p>
+        </div>
         </section>
     </footer>
 </body>
