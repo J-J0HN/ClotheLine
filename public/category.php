@@ -1,6 +1,7 @@
 <?php
 require '../pdo.php';
 require '../functions.php';
+$mainClass='main';
 
 $category=find($pdo, 'category', 'name', $_GET['f'])[0];
 $categories=findAll($pdo, 'category');

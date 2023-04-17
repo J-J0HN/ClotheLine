@@ -157,7 +157,7 @@
                     </ul>
                 </a>
     </nav>
-    <main class="main">
+    <main class="<?=$mainClass?>">
         <?=$output?>
     </main>
     <footer class="footerclass">

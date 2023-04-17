@@ -4,6 +4,7 @@ session_start();
 require '../pdo.php';
 require '../functions.php';
 $title='ClotheLine';
+$mainClass='indexmain';
 
 $bannersDir = "banners";
 $files = scandir($bannersDir);
