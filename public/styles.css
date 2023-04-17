@@ -9,6 +9,9 @@ body {
     height: 0;
 }
 
+
+/* nav section---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .nav {
     height: 0;
 }
@@ -66,12 +69,17 @@ nav ul ul li {
     display: block;
     font-size: small;
     position: relative;
+    padding: 0.5vw 0;
 }
 
 nav ul ul ul {
     position: absolute;
     left: 100%;
     top: 0;
+}
+
+nav ul ul li:hover {
+    background-color: #4c7daf;
 }
 
 .logo {
@@ -90,12 +98,15 @@ nav ul ul ul {
 
 .searchbar input[type="text"] {
     flex-grow: 1;
+    position: relative;
     padding: 10px;
     border: none;
     border-bottom-left-radius: 0.35em;
     border-top-left-radius: 0.35em;
+    border-bottom-right-radius: 0.35em;
     font-style: italic;
     width: 290px;
+    border-top-right-radius: 0.35em;
 }
 
 .searchbar button[type="submit"] {
@@ -108,6 +119,7 @@ nav ul ul ul {
     border-bottom-right-radius: 0.35em;
     position: absolute;
     right: 0;
+    height: 45px;
 }
 
 .searchbar button[type="submit"]:hover {
@@ -307,37 +319,36 @@ footer button[type="submit"] {
     box-sizing: border-box;
 }
 
-
-.category-name{
+.category-name {
     text-align: center;
 }
 
-.product-filter{
+.product-filter {
     float: left;
     width: 11em;
     margin: 1em;
     grid-area: filter;
 }
 
-#price{
+#price {
     width: 12em;
 }
 
-#size{
+#size {
     position: relative;
     left: 9px;
 }
 
-.form-group{
+.form-group {
     margin: 1em;
     margin-left: 0;
 }
 
-.filter-heading{
+.filter-heading {
     font-size: 1em;
 }
 
-.main{
+.main {
     min-height: 90vh;
     background-color: #fff;
     width: 90vw;
@@ -350,15 +361,15 @@ footer button[type="submit"] {
     grid-template-areas: "filter products";
 }
 
-.products{
+.products {
     grid-area: products;
 }
 
-.products img{
-    width: 224px; 
+.products img {
+    width: 224px;
     height: 224px;
 }
 
-.single-product{
+.single-product {
     width: 300px;
 }
