@@ -120,6 +120,7 @@ nav ul ul li:hover {
     position: absolute;
     right: 0;
     height: 45px;
+    top: 0.1em;
 }
 
 .searchbar button[type="submit"]:hover {
