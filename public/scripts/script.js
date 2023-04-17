@@ -64,6 +64,10 @@ function myLoadFunction() {
   startGallery();
 }
 
+function updatePriceValue(val) {
+  document.getElementById('price-value').innerHTML = "$" + val;
+}
+
 let currentSlide = 0;
 let startX = 0;
 
