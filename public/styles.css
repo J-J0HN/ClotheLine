@@ -1,248 +1,254 @@
 body {
-  margin: 0;
-  padding: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
 
 /* navigation bar section ----------------------------------------------------------------------------------------------------------------------------------------- */
 
 nav {
-  background-color: #1a4570;
-  color: rgb(255, 255, 255);
-  font-family: Segoe UI, "Tahoma", Geneva, Verdana, sans-serif;
-  padding-top: 2.5em;
-  height: 6em;
-  text-decoration: none;
-  margin-top: 0em;
+    background-color: #1a4570;
+    color: rgb(255, 255, 255);
+    font-family: Segoe UI, "Tahoma", Geneva, Verdana, sans-serif;
+    padding-top: 2.5em;
+    height: 6em;
+    text-decoration: none;
+    margin-top: 0em;
 }
 
 a {
-  color: white;
-  text-decoration: none;
-  font-family: Segoe UI, "Tahoma", Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-family: Segoe UI, "Tahoma", Geneva, Verdana, sans-serif;
 }
 
 nav ul {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(17, 1fr);
-  text-align: center;
-  position: relative;
-  left: 5em;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    text-align: center;
+    position: relative;
+    left: 5em;
 }
 
-nav > ul > li {
-  position: relative;
-  font-size: small;
-  width: 5vw;
+nav>ul>li {
+    position: relative;
+    font-size: small;
+    width: 5vw;
 }
 
 nav ul ul {
-  position: relative;
-  left: 0;
-  background-color: #1a4570;
-  padding: 0;
-  display: block;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  z-index: 1;
+    position: relative;
+    left: 0;
+    background-color: #1a4570;
+    padding: 0;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
 }
 
-nav > ul > li:hover > ul {
-  opacity: 1;
-  pointer-events: auto;
-  display: block;
+nav>ul>li:hover>ul {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
 }
 
 nav ul ul li {
-  display: block;
-  font-size: small;
-  position: relative;
-  margin-top: 0.5vw;
-  margin-bottom: 0.5vw;
-  transition: background-color 0.25s ease-in-out;
+    display: block;
+    font-size: small;
+    position: relative;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    transition: background-color 0.25s ease-in-out;
 }
 
 nav ul ul ul {
-  position: absolute;
-  left: 100%;
-  top: 0;
-  display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
 }
 
 nav ul ul li:hover {
-  background-color: #4c7daf;
+    background-color: #4c7daf;
 }
 
 .logo {
-  width: 9em;
-  height: 7em;
-  margin-top: -3em;
-  margin-left: 9.75vw;
-  margin-right: 4.25vw;
+    width: 9em;
+    height: 7em;
+    margin-top: -3em;
+    margin-left: 9.75vw;
+    margin-right: 4.25vw;
 }
 
 .searchbar {
-  display: flex;
-  width: 25em;
-  margin: 0 auto;
-  height: 2em;
+    display: flex;
+    width: 25em;
+    margin: 0 auto;
+    height: 2em;
 }
 
 .searchbar input[type="text"] {
-  flex-grow: 1;
-  padding: 10px;
-  border: none;
-  border-bottom-left-radius: 0.35em;
-  border-top-left-radius: 0.35em;
-  font-style: italic;
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-bottom-left-radius: 0.35em;
+    border-top-left-radius: 0.35em;
+    font-style: italic;
 }
 
 .searchbar button[type="submit"] {
-  background-color: #fff;
-  border: none;
-  color: #2eabff;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-top-right-radius: 0.35em;
-  border-bottom-right-radius: 0.35em;
+    background-color: #fff;
+    border: none;
+    color: #2eabff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-top-right-radius: 0.35em;
+    border-bottom-right-radius: 0.35em;
 }
 
 .searchbar button[type="submit"]:hover {
-  background-color: #d2f5ff;
+    background-color: #d2f5ff;
 }
 
 .acc ul {
-  position: absolute;
-  top: 100%;
-  left: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
 .acc ul li {
-  width: 100%;
+    width: 100%;
 }
 
 .acc ul li a {
-  display: block;
-  padding: 10px;
+    display: block;
+    padding: 10px;
 }
 
 .acc ul li a:hover {
-  background-color: #3a3a3a;
+    background-color: #3a3a3a;
 }
 
 .cart {
-  height: 2em;
-  margin-left: 3.5vw;
-  margin-right: 2.5vw;
+    height: 2em;
+    margin-left: 3.5vw;
+    margin-right: 2.5vw;
 }
 
+
 /* Image Slider at index*/
+
 .slider-container {
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
 }
 
 .slider {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 .gallery {
-  max-width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.3s ease-in-out;
 }
 
 .gallery img {
-  flex-grow: 1;
-  max-height: 57vw;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+    flex-grow: 1;
+    max-height: 57vw;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .controls {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .prev,
 .next {
-  background-color: #1a4570;
-  opacity: 0.6;
-  color: #fff;
-  border: none;
-  padding: 1em 2em;
-  margin-right: 1em;
-  cursor: pointer;
+    background-color: #1a4570;
+    opacity: 0.6;
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    margin-right: 1em;
+    cursor: pointer;
 }
 
 .prev:hover,
 .next:hover {
-  opacity: 0.3;
+    opacity: 0.3;
 }
 
 .prev:active,
 .next:active {
-  opacity: 0.1;
+    opacity: 0.1;
 }
+
 
 /* main section ----------------------------------------------------------------------------------------------------------------------------------------- */
 
 main {
-  min-height: 70vh;
-  background-color: #fff;
-  width: 90vw;
-  display: block;
-  margin: auto;
+    min-height: 70vh;
+    background-color: #fff;
+    width: 97.5vw;
+    display: block;
+    margin: auto;
 }
+
 
 /* footer section ----------------------------------------------------------------------------------------------------------------------------------------- */
 
 footer {
-  background-color: #1a4570;
-  padding: 10px;
-  color: white;
-  min-height: 20vh;
-  justify-content: center;
-  font-family: Arial, "Helvetica", sans-serif;
+    background-color: #1a4570;
+    padding: 10px;
+    color: white;
+    min-height: 20vh;
+    justify-content: center;
+    font-family: Arial, "Helvetica", sans-serif;
 }
 
 footer h1 {
-  font-family: Arial, "Helvetica", sans-serif;
-  font-size: medium;
-  font-weight: 500;
-  display: inline;
-  margin: 0;
-  margin-bottom: 1em;
-  margin-top: 0;
+    font-family: Arial, "Helvetica", sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    display: inline;
+    margin: 0;
+    margin-bottom: 1em;
+    margin-top: 0;
 }
 
 .footerclass {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  width: 100vw;
-  grid-template-rows: auto;
-  grid-template-areas: "header header header" "square1 square2 square3";
-  justify-items: center;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "square1 square2 square3";
+    justify-items: center;
+    align-items: center;
 }
 
 .footerclass section {
-  text-align: center;
-  margin-top: 2.5em;
+    text-align: center;
+    margin-top: 2.5em;
 }
 
 .p1 {
-  grid-area: square1;
+    grid-area: square1;
 }
+
 
 /* .socials {
   position: absolute;
@@ -251,8 +257,9 @@ footer h1 {
 } */
 
 .p2 {
-  grid-area: square2;
+    grid-area: square2;
 }
+
 
 /* .newsletters {
   position: absolute;
@@ -261,15 +268,16 @@ footer h1 {
 } */
 
 .p2 p {
-  /* position: absolute;
+    /* position: absolute;
   top: 103%;
   left: 48%; */
-  font-size: x-small;
+    font-size: x-small;
 }
 
 .p3 {
-  grid-area: square3;
+    grid-area: square3;
 }
+
 
 /* .contacts {
   position: absolute;
@@ -278,51 +286,51 @@ footer h1 {
 } */
 
 .newsletter {
-  /* position: absolute; */
-  background-color: #0b2b4b;
-  border: 1px solid #000000;
-  padding: 1vh 1vw;
-  /* left: 41%; */
-  /* top: 88.5%; */
+    /* position: absolute; */
+    background-color: #0b2b4b;
+    border: 1px solid #000000;
+    padding: 1vh 1vw;
+    /* left: 41%; */
+    /* top: 88.5%; */
 }
 
 footer section {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-rows: auto 1fr;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: auto 1fr;
 }
 
 footer section header {
-  grid-row: 1;
-  justify-content: center;
-  align-items: center;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 footer input[type="email"] {
-  background-color: #1a4570;
-  border: none;
-  padding: 1em;
-  margin: 0.5em 0;
-  width: 100%;
-  box-sizing: border-box;
-  color: white;
-  border: 1px solid #000000;
-  font-size: small;
+    background-color: #1a4570;
+    border: none;
+    padding: 1em;
+    margin: 0.5em 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    border: 1px solid #000000;
+    font-size: small;
 }
 
 footer input[type="email"]::placeholder {
-  color: rgba(255, 255, 255, 0.863);
-  font-size: small;
+    color: rgba(255, 255, 255, 0.863);
+    font-size: small;
 }
 
 footer button[type="submit"] {
-  background-color: white;
-  color: navy;
-  cursor: pointer;
-  font-size: medium;
-  padding: 0.5em;
-  margin: 0.5em 0;
-  width: 100%;
-  box-sizing: border-box;
+    background-color: white;
+    color: navy;
+    cursor: pointer;
+    font-size: medium;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: 100%;
+    box-sizing: border-box;
 }
