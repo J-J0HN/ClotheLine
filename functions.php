@@ -56,21 +56,6 @@ function find($pdo, $table, $field, $value){
 }
 
 
-
-function findJob($pdo, $table, $field, $value){
-    $stmt = $pdo->prepare('SELECT * FROM ' . $table .' WHERE ' . $field . ' = :value AND closingDate > :date');
-    $date = new DateTime;
-    $values = [
-        'value'=>$value,
-        'date' => $date->format('Y-m-d')
-    ];
-
-    $stmt->execute($values);
-
-    return $stmt->fetchAll();
-
-}
-
 function delete($pdo, $table, $field, $id) {
 	$stmt = $pdo->prepare('DELETE FROM ' . $table . ' WHERE ' .$field.' = :id');
 	$criteria = [
@@ -86,12 +71,6 @@ function findAll($pdo, $table){
 
     return $stmt->fetchAll();
 
-}
-
-function closingDateJobs($pdo, $table, $orderField){
-    $stmt=$pdo->prepare('SELECT * FROM ' . $table. ' WHERE archived = 0 ORDER BY ' .$orderField. ' LIMIT 10');
-    $stmt->execute();
-    return $stmt->fetchAll();
 }
 
 function findAnd($pdo, $table, $field1, $value1, $field2, $value2){

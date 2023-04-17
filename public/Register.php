@@ -1,11 +1,10 @@
 <?php
 require '../pdo.php';
 require '../functions.php';
+
 $title = 'ClotheLine';
 
 if (isset($_POST['submit'])) {
-    $stmt = $pdo->prepare("INSERT INTO user (Firstname, Lastname, username, email, password)
-        VALUES (:Firstname, :Lastname, :username, :email, :password)");
     $values = [
         'Firstname' => $_POST['Firstname'],
         'Lastname' => $_POST['Lastname'],
@@ -13,30 +12,28 @@ if (isset($_POST['submit'])) {
         'email' => $_POST['email'],
         'password' => sha1($_POST['password']),
     ];
-    $stmt->execute($values);
-    $user_registered = true; // set flag to true
+    insert($pdo, 'user', $values);
 
-    $users = $pdo->prepare('SELECT * FROM user WHERE email = :email');
-    $values = [
-        'email' => $_POST['email']
-    ];
-    $users->execute($values);
-
-    $user = $users->fetch();
+    $users = find($pdo, 'user', 'email', $_POST['email']);
+    $user = $users[0];
+    session_start();
     $_SESSION['login'] = $user['userid'];
     $_SESSION['username'] = $user['username'];
+    $user_registered = true; // set flag to true
 }
 
-// Load the register HTML template
-ob_start();
-require '../templates/register.html.php';
-$output = ob_get_clean();
+$templateVars = array('title' => $title);
 
+// Load the register HTML template
+$output = loadTemplate('../templates/register.html.php', $templateVars);
 
 if (isset($user_registered)) {
-    $output .= '<p>You have registered!</p>';
+    $message = 'You have registered!';
+    $output .= loadTemplate('../templates/message.html.php', array('message' => $message));
     $output .= '<a href="login.php" class="back-home">Go To Login</a>';
 }
 
-
+// Load the main template
+$templateVars = array('title' => $title, 'output' => $output);
 require '../templates/mainTemp.html.php';
+?>
