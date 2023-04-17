@@ -306,3 +306,59 @@ footer button[type="submit"] {
     width: 100%;
     box-sizing: border-box;
 }
+
+
+.category-name{
+    text-align: center;
+}
+
+.product-filter{
+    float: left;
+    width: 11em;
+    margin: 1em;
+    grid-area: filter;
+}
+
+#price{
+    width: 12em;
+}
+
+#size{
+    position: relative;
+    left: 9px;
+}
+
+.form-group{
+    margin: 1em;
+    margin-left: 0;
+}
+
+.filter-heading{
+    font-size: 1em;
+}
+
+.main{
+    min-height: 90vh;
+    background-color: #fff;
+    width: 90vw;
+    display: grid;
+    margin: auto;
+    box-shadow: 0px 0px 5px #888;
+    color: #444;
+    grid-auto-flow: column;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "filter products";
+}
+
+.products{
+    grid-area: products;
+}
+
+.products img{
+    width: 224px; 
+    height: 224px;
+}
+
+.single-product{
+    width: 300px;
+}
