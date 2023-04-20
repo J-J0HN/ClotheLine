@@ -16,7 +16,6 @@
 <nav class="navigation">
         <ul class="nav">
             <?php
-            require '../functions.php';
             require '../pdo.php';
                 $category=findAll($pdo, 'category');
                 while($cat = $category->fetch()){
