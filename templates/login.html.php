@@ -11,5 +11,7 @@
     <input type="password" name="password" id="password" placeholder="Enter your password" required>
 
     <button type="submit" name="submit" class="login-btn">Login</button>
+
+    <p>Don't have an account yet? <a href="register.php" class="signup-link">Sign up</a></p>
   </form>
 </div>
