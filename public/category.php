@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../pdo.php';
 require '../functions.php';
 $mainClass='main';
@@ -15,7 +16,7 @@ if(isset($_GET['subcatid'])){
         'subcat'=>$subcat
     ];
 }else{
-    $category=find($pdo, 'category', 'name', $_GET['f'])[0];
+    $category=find($pdo, 'category', 'catid', $_GET['f'])[0];
     $title= "Clotheline - " . $category['name'];
     $products = find($pdo, 'product', 'category', $_GET['f']);
     $templateVars=[

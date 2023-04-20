@@ -1,4 +1,4 @@
-<form action="" method="post" class="loginform">
+<form action="" method="post" class="loginform" enctype="multipart/form-data">
     <input type="hidden" name="prod[prodid]" value="<?=isset($prod['prodid'])? $prod['prodid'] : '' ?>">
 
     <label>Product Name:</label>
@@ -30,6 +30,9 @@
 					}
 ?>
 				</select>
+
+                <label>Product Image</label>
+<input type="file" name="prod[prodimg]" />
 
 
 		<input type="submit" name="submit" value="Add" />
