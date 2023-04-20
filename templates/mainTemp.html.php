@@ -18,11 +18,11 @@
             <?php
             require '../pdo.php';
                 $category=findAll($pdo, 'category');
-                while($category){
+                while($cat = $category->fetchAll()){
                     ?>
-                <li><a href="category.php?f=<?=$category['name']?>"><?=$category['name']?></a></li>
+                <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a></li>
 <?php
-                foreach($category as $categ){
+                foreach($cat as $categ){
                     $subcats = findAll($pdo, 'subcategory');
                     echo '<ul>';
                     while($subcat = $subcats->fetch()){
