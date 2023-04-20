@@ -23,6 +23,7 @@
                     ?>
                 <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a>
 <?php
+                }
                 foreach($cat as $categ){
                     $stmt = $pdo->prepare('SELECT * FROM subcategory');
                     $stmt->execute();
@@ -33,7 +34,6 @@
                     echo '</ul>';
                 }
                 echo '</li>';
-                }
 
 
 
