@@ -62,6 +62,7 @@
                 ?>
                     </ul>
                 </a>
+                </ul>
     </nav>
     <main class="<?=$mainClass?>">
         <?=$output?>
