@@ -24,7 +24,7 @@
                 <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a></li>
 <?php
                 foreach($cat as $categ){
-                    $subcats = findAll($pdo, 'subcategory')
+                    $subcats = findAll($pdo, 'subcategory');
                     echo '<ul>';
                     while($subcat = $subcats->fetch()){
                         echo'<li><a href="category.php?f='.$cat['name'].'&subcatid='.$subcat['id'].'">'.$subcat['name'].'</a></li>';
