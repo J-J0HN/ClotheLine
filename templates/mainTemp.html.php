@@ -17,15 +17,17 @@
         <ul class="nav">
             <?php
             require '../pdo.php';
-                $category=findAll($pdo, 'category');
-                while($cat = $category->fetchAll()){
+            $stmt = $pdo->prepare('SELECT * FROM category');
+            $stmt->execute();
+            while($cat = $stmt->fetch()){
                     ?>
                 <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a></li>
 <?php
                 foreach($cat as $categ){
-                    $subcats = findAll($pdo, 'subcategory');
+                    $stmt = $pdo->prepare('SELECT * FROM subcategory');
+                    $stmt->execute();
                     echo '<ul>';
-                    while($subcat = $subcats->fetchAll()){
+                    while($subcat = $stmt->fetch()){
                         echo'<li><a href="category.php?f='.$cat['name'].'&subcatid='.$subcat['id'].'">'.$subcat['name'].'</a></li>';
                     }
                     echo '</ul>';
