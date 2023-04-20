@@ -24,11 +24,11 @@
                 <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a>
 <?php
                 }
-                foreach($cat as $categ){
-                    $stmt = $pdo->prepare('SELECT * FROM subcategory');
-                    $stmt->execute();
+                foreach($stmt as $cat){
+                    $subcatq = $pdo->prepare('SELECT * FROM subcategory');
+                    $subcatq->execute();
                     echo '<ul>';
-                    while($subcat = $stmt->fetch()){
+                    while($subcat = $subcatq->fetch()){
                         echo'<li><a href="category.php?f='.$cat['name'].'&subcatid='.$subcat['id'].'">'.$subcat['name'].'</a></li>';
                     }
                     echo '</ul>';
