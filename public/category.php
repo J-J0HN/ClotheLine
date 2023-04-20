@@ -3,9 +3,6 @@ require '../pdo.php';
 require '../functions.php';
 $mainClass='main';
 
-$category=find($pdo, 'category', 'name', $_GET['f'])[0];
-$categories=findAll($pdo, 'category');
-
 $title= "Clotheline - " . $category['name'];
 
 $products = find($pdo, 'product', 'category', $_GET['f']);
