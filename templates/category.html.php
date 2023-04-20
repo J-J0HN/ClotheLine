@@ -31,7 +31,7 @@
 </div>
 
 <div class="products">
-    <h1 class="category-name"><?=$category['name'];?> </h1>
+    <h1 class="category-name"><?=$category['name'] . isset($_GET['subcatid'])?$subcat['name'] :'';?> </h1>
     <?php
     foreach($products as $product){
         ?>

@@ -15,123 +15,28 @@
 <body id="clicked" class="home">
 <nav class="navigation">
         <ul class="nav">
-            <li>
-                <a href="category.php?f=" class="All">All</a>
-            </li>
-            <li>
-                <a href="category.php?f=women" class="Womens">Womens</a>
-                <ul>
-                    <li>
-                        <a href="category.php?f=wJackets" class="Jackets">Jackets</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=wH&S" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=wTops" class="Tops">Tops</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=wShoes" class="Shoes">Shoes</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=wTrousers" class="Trousers">Trousers</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=wDresses" class="Dresses">Dresses</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=wSkirts" class="Skirts">Skirts</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=wJackets" class="Jackets">Jackets</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="category.php?f=men" class="Mens">Mens</a>
-                <ul>
-                    <li>
-                        <a href="category.php?f=mJackets" class="Jackets">Jackets</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=mH&S" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=mTops" class="Tops">Tops</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=mShoes" class="Shoes">Shoes</a>
-                    </li>
-                    <li>
-                        <a href="category.php?f=mTrousers" class="Trousers">Trousers</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="Boys">Boys</a>
-                <ul>
-                    <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Tops">Tops</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Shoes">Shoes</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Trousers">Trousers</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Jeans">Jeans</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="Girls">Girls</a>
-                <ul>
-                    <li>
-                        <a href="category.html" class="Jackets">Jackets</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Tops">Tops</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Shoes">Shoes</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Dresses">Dresses</a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="Skirts">Skirts</a>
-                </ul>
-                </li>
-                <li>
-                    <a href="category.php" class="Baby">Babies</a>
-                    <ul>
-                        <li>
-                            <a href="category.html" class="Onesies">Onesies</a>
-                        </li>
-                        <li>
-                            <a href="category.html" class="Sleepers">Sleepers</a>
-                        </li>
-                        <li>
-                            <a href="category.html" class="Swaddles">Swaddles</a>
-                        </li>
-                        <li>
-                            <a href="category.html" class="Bibs">Bibs</a>
-                        </li>
-                        <li>
-                            <a href="category.html" class="Hats">Hats</a>
-                        </li>
-                    </ul>
-                </li>
+            <?php
+            require '../functions.php';
+            require '../pdo.php';
+                $category=findAll($pdo, 'category');
+                while($cat = $category->fetch()){
+                    ?>
+                <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a></li>
+<?php
+                foreach($cat as $categ){
+                    $subcats = findAll($pdo, 'subcategory')
+                    echo '<ul>';
+                    while($subcat = $subcats->fetch()){
+                        echo'<li><a href="category.php?f='.$cat['name'].'&subcatid='.$subcat['id'].'">'.$subcat['name'].'</a></li>';
+                    }
+                    echo '</ul>';
+
+                }
+                }
+
+
+
+?>
                 <li></li>
                 <li></li>
                 <a href="index.php"class="logolink"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
