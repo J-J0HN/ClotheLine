@@ -18,7 +18,7 @@
             <?php
             require '../pdo.php';
                 $category=findAll($pdo, 'category');
-                while($cat = $category->fetch()){
+                while($cat = $category){
                     ?>
                 <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a></li>
 <?php
