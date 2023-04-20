@@ -23,13 +23,11 @@
                     ?>
                 <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a>
 <?php
-                }
-            foreach($stmt as $cat->fetch()){
                     $subcatq = $pdo->prepare('SELECT * FROM subcategory');
                     $subcatq->execute();
                     echo '<ul>';
                     while($subcat = $subcatq->fetch()){
-                        echo'<li><a href="category.php?f='.$cat['name'].'&subcatid='.$subcat['id'].'">'.$subcat['name'].'</a></li>';
+                        echo'<li><a href="category.php?f='.$cat['name'].'&subcatid='.$subcat['subcatid'].'">'.$subcat['name'].'</a></li>';
                     }
                     echo '</ul>';
                 }

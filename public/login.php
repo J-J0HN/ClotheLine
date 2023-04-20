@@ -21,12 +21,11 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    $message = "Invalid email or password. Please try again.";
+
 }
 
 $templateVars = [
     'title' => $title,
-    'message' => isset($message) ? $message : '',
     'loggedIn' => isset($_SESSION['login']),
 ];
 
