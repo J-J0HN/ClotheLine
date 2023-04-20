@@ -24,7 +24,7 @@
                 <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a>
 <?php
                 }
-                foreach($stmt as $cat){
+            foreach($stmt as $cat->fetch()){
                     $subcatq = $pdo->prepare('SELECT * FROM subcategory');
                     $subcatq->execute();
                     echo '<ul>';
@@ -62,7 +62,6 @@
                 ?>
                     </ul>
                 </a>
-                </ul>
     </nav>
     <main class="<?=$mainClass?>">
         <?=$output?>
