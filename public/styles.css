@@ -489,5 +489,9 @@ label {
     color: #1A4570;
   }
   
-
-
+  .addProdForm select, .addProdForm label, .addProdForm input, .addProdForm textarea {float: left; width: 200px; padding: 10px; margin-top: 20px;}
+  .addProdForm label {clear: left;}
+  textarea {height: 100px;}
+  .addProdForm input[type="text"], .addProdForm input[type="password"], textarea {color: #999; font-family: verdana, sans-serif}
+  .addProdForm input[type="submit"] {clear: both; margin-left: 220px; width: 220px;}
+  .addProdForm select {width: 220px;}
