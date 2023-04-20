@@ -21,7 +21,7 @@
             $stmt->execute();
             while($cat = $stmt->fetch()){
                     ?>
-                <li><a href="category.php?f=<?=$cat['name']?>"><?=$cat['name']?></a>
+                <li><a href="category.php?f=<?=$cat['catid']?>"><?=$cat['name']?></a>
 <?php
                     $subcatq = $pdo->prepare('SELECT * FROM subcategory');
                     $subcatq->execute();

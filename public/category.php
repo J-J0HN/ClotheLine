@@ -5,7 +5,7 @@ $mainClass='main';
 
 
 if(isset($_GET['subcatid'])){
-    $category=find($pdo, 'category', 'name', $_GET['f'])[0];
+    $category=find($pdo, 'category', 'catid', $_GET['f'])[0];
     $subcat=find($pdo, 'subcategory', 'subcatid', $_GET['subcatid'])[0];
     $title= "Clotheline - " . $category['name'] . ' ' . $subcat['name'];
     $products = findAnd($pdo, 'product', 'category', $_GET['f'], 'subcategory', $_GET['subcatid']);

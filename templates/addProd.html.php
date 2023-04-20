@@ -1,5 +1,5 @@
 <form action="" method="post" class="loginform">
-    <input type="hidden" name="prod[prodid]" value="<?=isset($prod['prodid'])? $prod['id'] : '' ?>">
+    <input type="hidden" name="prod[prodid]" value="<?=isset($prod['prodid'])? $prod['prodid'] : '' ?>">
 
     <label>Product Name:</label>
 				<input type="text" name="prod[prodname]" value="<?=$prod['prodname'] ?? ''?>"/>
@@ -30,29 +30,6 @@
 					}
 ?>
 				</select>
-
-                <div id="content">
-            <form method="POST" action="">
-            <div class="form-group">
-                <input class="form-control" type="file" name="prod[prodimg]" value="" />
-            </div>
-        </form>
-    </div>
-    <div id="display-image">
-    <?php
-        $query = "select * from product";
-        $stmt = $pdo->prepare($query);
-
-        $stmt->execute();
- 
-        while ($data = $stmt->fetch()) {
-    ?>
-        <img src="./public/<?php echo $data['prodimg']; ?>">
- 
-    <?php
-        }
-    ?>
-    </div>
 
 
 		<input type="submit" name="submit" value="Add" />

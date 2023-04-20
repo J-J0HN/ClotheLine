@@ -11,13 +11,7 @@ if (isset($_GET['id'])){
 }
 
 if (isset($_POST['submit'])){
-    save($pdo, 'product', $_POST['prod'], 'id');
-
-    $filename = $_FILES["uploadfile"]["name"];
-    $tempname = $_FILES["uploadfile"]["tmp_name"];
-    $folder = "./image/" . $filename;
-    $sql = "INSERT INTO product (prodimg) VALUES ('$filename')";
-    $sql->execute();
+    save($pdo, 'product', $_POST['prod'], 'prodid');
 
     header('location: index.php');
 }
