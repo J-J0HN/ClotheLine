@@ -20,9 +20,8 @@ if (isset($_POST['submit'])) {
             exit;
         }
     }
-
-
 }
+
 
 $templateVars = [
     'title' => $title,
