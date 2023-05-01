@@ -16,6 +16,7 @@ if (isset($_POST['submit'])) {
             session_start();
             $_SESSION['login'] = $user['userid'];
             $_SESSION['username'] = $user['username'];
+            $_SESSION['admin'] = $user['admin'];
             header("Location: index.php");
             exit;
         }

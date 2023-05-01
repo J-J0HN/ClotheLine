@@ -29,9 +29,7 @@ $templateVars = array('title' => $title);
 $output = loadTemplate('../templates/register.html.php', $templateVars);
 
 if (isset($user_registered)) {
-    $message = 'You have registered!';
-    $output .= loadTemplate('../templates/message.html.php', array('message' => $message));
-    $output .= '<a href="login.php" class="back-home">Go To Login</a>';
+    header("location: login.php");
 }
 
 // Load the main template
