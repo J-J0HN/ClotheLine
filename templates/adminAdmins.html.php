@@ -3,7 +3,7 @@
 
 				<form action="" method="POST">
 
-					<input type="hidden" name="admin[userid]" value="<?=isset($admin['usearid'])? $admin['userid'] : '' ?>" />
+					<input type="hidden" name="admin[userid]" value="<?=isset($admin['userid'])? $admin['userid'] : '' ?>" />
 
                     <label for="Firstname">Firstname:</label>
 					<input type="text" id="Firstname" name="admin[Firstname]" value="<?=$admin['Firstname'] ?? ''?>"placeholder="Enter your Firstname" />
