@@ -228,6 +228,8 @@ main {
     font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif;
     font-size: medium;
     display: inline;
+    margin: 0 auto;
+    text-align: center;
 }
 
 
