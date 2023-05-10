@@ -13,7 +13,7 @@ if (isset($_GET['id'])){
 if (isset($_POST['submit'])){
     save($pdo, 'category', $_POST['category'], 'catid');
 
-    header('location: categories.php');
+    header('location: catList.php');
 }
 else{
     $output=loadTemplate('../templates/adminCat.html.php', ['cat' => $cat]);

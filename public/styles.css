@@ -212,7 +212,7 @@ nav ul ul li:hover {
 
 /* main section ----------------------------------------------------------------------------------------------------------------------------------------- */
 main{
-    height: 100vh;
+    height: 115vh;
 }
 
 .indexmain {
@@ -327,6 +327,10 @@ footer button[type="submit"] {
     box-sizing: border-box;
 }
 
+
+/* category page css -------------------------------------- */
+
+
 .category-name {
     text-align: center;
 }
@@ -378,10 +382,46 @@ footer button[type="submit"] {
     height: 224px;
 }
 
-.single-product {
-    width: 300px;
-}
+/* .single-product {
+    display: inline-block;
+    width: 244px;
+} */
 
+.productListing {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+  }
+  
+  .single-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc((100% - 3em) / 4);
+    margin: 1.5em 0;
+  }
+  
+  .single-product .prodimage {
+    width: 100%;
+  }
+  
+  .single-product .prodname {
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  
+  .single-product .prodprice {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  
+
+
+/* login form css ------------------------------------------------------- */
 
 .loginform {
     display: flex;
@@ -558,6 +598,7 @@ label {
     width: 20em;
     height: 3em;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 .deleteCat{
@@ -573,8 +614,62 @@ label {
     background-color: palevioletred;
     height: 25px;
     width: 5em;
+    cursor: pointer;
 }
 
 .adminBack{
     color: #000000;
 }
+
+.adminProd h1{
+    display: flex;
+    justify-content: center;
+}
+
+.adminProd a{
+    display: flex;
+    justify-content: center;
+    color: #000000;
+}
+  
+  .single-product-admin {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 244px;
+    margin: 2em;
+  }
+  
+  .single-product-admin .prodimage {
+    width: 244px;
+    height: 244px;
+  }
+  
+  .single-product-admin .prodname {
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  
+  .single-product-admin .prodprice {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  .admin-products{
+    display: flex;
+    justify-content: center;
+  }
+
+  .admin-products a{
+    color: #000000;
+    align-items: center;
+    margin-left: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: gainsboro;
+    height: 25px;
+    width: 40px;
+  }

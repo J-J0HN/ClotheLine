@@ -7,10 +7,10 @@
     <a href="subCatList.php">
         <p>Manage a subcategory</p>
     </a>
-    <a href="adminProducts.php">
+    <a href="prodList.php">
         <p>Manage products</p>
     </a>
-    <a href="adminAdmins.php">
+    <a href="adminList.php">
         <p>Manage admins</p>
     </a>
 </div>

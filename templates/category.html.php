@@ -32,8 +32,15 @@
 
 <div class="products">
     <h1 class="category-name"><?=$category['name'] . (isset($_GET['subcatid']) ? ' '.$subcat['name'] : '');?> </h1>
+    <div class="productListing">
     <?php
-    foreach($products as $product){
+    $products_per_page = 20;
+
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+    $start_index = ($page - 1) * $products_per_page;
+    $end_index = $start_index + $products_per_page;
+    for ($i = $start_index; $i < $end_index && $i < count($products); $i++) {
+      $product = $products[$i];
         ?>
     <div class="single-product"> 
     <a href="product.php?id=<?=$product['prodid']?>"><img src="<?=$product['prodimg']?>" alt="<?=$product['prodname']?>" class="prodimage"></a>
@@ -44,4 +51,5 @@
     }
 
 ?>
+</div>
 </div>

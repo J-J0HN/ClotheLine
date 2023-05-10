@@ -31,10 +31,14 @@
 ?>
 				</select>
 
-                <label>Product Image</label>
-<input type="file" name="prod[prodimg]" />
+				<label>Product Image</label>
+    <?php if(isset($prod['prodimg'])): ?>
+        <p>Current File Name: <?=$prod['prodimg']?></p>
+        <img src="<?=$prod['prodimg']?>" alt="Product Image" style="width: 244px;height: 244px;">
+        <input type="checkbox" name="use_current_image" id="use_current_image" value="1">
+        <label for="use_current_image">Use current image</label>
+    <?php endif; ?>
+    <input type="file" name="prod[prodimg]"/>
 
-
-		<input type="submit" name="submit" value="Add" />
-
+    <input type="submit" name="submit" value="Add" style="margin: 1em;"/>
 </form>

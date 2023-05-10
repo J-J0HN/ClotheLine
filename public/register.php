@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
         'Lastname' => $_POST['Lastname'],
         'username' => $_POST['username'],
         'email' => $_POST['email'],
-        'password' => sha1($_POST['password']),
+        'password' => $_POST['password'],
     ];
     insert($pdo, 'user', $values);
 
