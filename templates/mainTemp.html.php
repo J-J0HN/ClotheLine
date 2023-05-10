@@ -68,7 +68,6 @@
     </nav>
     <main class="<?=$mainClass?>">
         <?=$output?>
-        <h3 class="popitems">POPULAR ITEMS</h3>
     </main>
     <footer class="footerclass">
         <section class="p1">
