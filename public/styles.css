@@ -211,7 +211,8 @@ nav ul ul li:hover {
 
 
 /* main section ----------------------------------------------------------------------------------------------------------------------------------------- */
-main{
+
+main {
     height: 100vh;
 }
 
@@ -223,6 +224,11 @@ main{
     margin: auto;
 }
 
+.popitems {
+    font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    display: inline;
+}
 
 
 /* footer section ----------------------------------------------------------------------------------------------------------------------------------------- */
@@ -382,7 +388,6 @@ footer button[type="submit"] {
     width: 300px;
 }
 
-
 .loginform {
     display: flex;
     flex-direction: column;
@@ -393,28 +398,29 @@ label {
     margin-bottom: 10px;
 }
 
-#email,#password {
+#email,
+#password {
     margin-bottom: 20px;
     padding: 10px;
     width: 300px;
     border-radius: 5px;
     border: none;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .register-btn {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #0077b6;
-    background-color: #1A4570; 
+    background-color: #1A4570;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
-
 .register-btn:hover {
-    background-color: #1A4570; 
+    background-color: #1A4570;
     border-color: #023e8a;
 }
 
@@ -422,18 +428,19 @@ label {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-  }
+}
 
-  a.back-home {
-    color: blue; 
-  }
-  .login-btn {
-    background-color: #1A4570; 
+a.back-home {
+    color: blue;
+}
+
+.login-btn {
+    background-color: #1A4570;
     color: white;
     width: 300px;
     height: 45px;
-  }
-  
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -457,22 +464,22 @@ label {
     width: 300px;
     border-radius: 5px;
     border: none;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .register-btn {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #0077b6;
-    background-color: #1A4570; 
+    background-color: #1A4570;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
-
 .register-btn:hover {
-    background-color: #1A4570; 
+    background-color: #1A4570;
     border-color: #023e8a;
 }
 
@@ -480,62 +487,92 @@ label {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-  }
+}
 
-  a.back-home {
-    color: blue; 
-  }
-  .login-btn {
-    background-color: #1A4570; 
+a.back-home {
+    color: blue;
+}
+
+.login-btn {
+    background-color: #1A4570;
     color: white;
     width: 300px;
     height: 45px;
-  }
-  
-  .signup-link {
+}
+
+.signup-link {
     color: #1A4570;
-  }
-  
-  .addProdForm select, .addProdForm label, .addProdForm input, .addProdForm textarea {float: left; width: 200px; padding: 10px; margin-top: 20px;}
-  .addProdForm label {clear: left;}
-  textarea {height: 100px;}
-  .addProdForm input[type="text"], .addProdForm input[type="password"], textarea {color: #999; font-family: verdana, sans-serif}
-  .addProdForm input[type="submit"] {clear: both; margin-left: 220px; width: 220px;}
-  .addProdForm select {width: 220px;}
+}
+
+.addProdForm select,
+.addProdForm label,
+.addProdForm input,
+.addProdForm textarea {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.addProdForm label {
+    clear: left;
+}
+
+textarea {
+    height: 100px;
+}
+
+.addProdForm input[type="text"],
+.addProdForm input[type="password"],
+textarea {
+    color: #999;
+    font-family: verdana, sans-serif
+}
+
+.addProdForm input[type="submit"] {
+    clear: both;
+    margin-left: 220px;
+    width: 220px;
+}
+
+.addProdForm select {
+    width: 220px;
+}
 
 
 /* admin dashboard area------------------------------------------------------------------         */
-.adminDiv{
+
+.adminDiv {
     position: relative;
     top: 40%;
 }
 
-.admin p{
+.admin p {
     color: #000000;
     display: flex;
     justify-content: center;
-    background-color: #137de0; 
-    border-radius: 20px; 
-    padding: 15px; 
+    background-color: #137de0;
+    border-radius: 20px;
+    padding: 15px;
 }
 
-.admin h1{
+.admin h1 {
     display: flex;
     justify-content: center;
 }
 
-.admin a{
+.admin a {
     display: flex;
     justify-content: center;
 }
 
-.admin blockquote{
+.admin blockquote {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.admin blockquote a{
+.admin blockquote a {
     color: #000000;
     align-items: center;
     margin-left: 1em;
@@ -546,12 +583,12 @@ label {
     width: 40px;
 }
 
-.addCatButton{
+.addCatButton {
     display: flex;
     justify-content: center;
 }
 
-.addCatButton input{
+.addCatButton input {
     background-color: #bfbfbf;
     border: none;
     border-radius: 20px;
@@ -560,14 +597,14 @@ label {
     font-size: 1.2em;
 }
 
-.deleteCat{
+.deleteCat {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 1em;
 }
 
-.deleteCat #deletebtn{
+.deleteCat #deletebtn {
     border: none;
     border-radius: 10px;
     background-color: palevioletred;
@@ -575,6 +612,6 @@ label {
     width: 5em;
 }
 
-.adminBack{
+.adminBack {
     color: #000000;
 }
