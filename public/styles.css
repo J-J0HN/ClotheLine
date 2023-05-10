@@ -536,6 +536,65 @@ label {
     color: #1A4570;
   }
   
+
+.sidebar {
+    background-color: #1a4570;
+    width: 250px;
+    height: 37%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .left ul li {
+    margin-bottom: 15px;
+  }
+  
+  .left ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .user-table {
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  
+  .user-table td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    height: 100vh;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+
   .addProdForm select, .addProdForm label, .addProdForm input, .addProdForm textarea {float: left; width: 200px; padding: 10px; margin-top: 20px;}
   .addProdForm label {clear: left;}
   textarea {height: 100px;}

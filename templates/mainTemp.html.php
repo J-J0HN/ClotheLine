@@ -55,9 +55,9 @@
                     if (isset($_SESSION['username'])) {
                         echo "<li><a href='#'>" . $_SESSION['username'] . "</a></li>";
                         echo "<li><a href='logout.php'>Log out</a></li>";
-                        if($_SESSION['admin'] > 0){
-                        echo '<li><a href="adminDash.php">Admin</a></li>';
-                        }
+                        echo '<li><a href="admin.php">Admin</a></li>';
+                        echo '<li><a href="Account.php">Account</a></li>';
+
                     } else {
                         echo "<li><a href='login.php'>Log-in</a></li>";
                         echo "<li><a href='register.php'>Sign-up</a></li>";
