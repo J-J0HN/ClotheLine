@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css"/>
     <link rel="icon shortcut" type="image/icon" href="ClotheLineBW.ico">
+    <script src="https://kit.fontawesome.com/4b2b408c99.js" crossorigin="anonymous"></script>
     <script src="/scripts/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title><?=$title?></title>
@@ -55,8 +56,6 @@
                         echo "<li><a href='#'>" . $_SESSION['username'] . "</a></li>";
                         echo "<li><a href='logout.php'>Log out</a></li>";
                         echo '<li><a href="admin.php">Admin</a></li>';
-                        echo '<li><a href="Account.php"> Account</a></li>';
-
                     } else {
                         echo "<li><a href='login.php'>Log-in</a></li>";
                         echo "<li><a href='register.php'>Sign-up</a></li>";

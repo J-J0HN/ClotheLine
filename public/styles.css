@@ -211,6 +211,9 @@ nav ul ul li:hover {
 
 
 /* main section ----------------------------------------------------------------------------------------------------------------------------------------- */
+main{
+    height: 100vh;
+}
 
 .indexmain {
     min-height: 70vh;
@@ -219,6 +222,7 @@ nav ul ul li:hover {
     display: block;
     margin: auto;
 }
+
 
 
 /* footer section ----------------------------------------------------------------------------------------------------------------------------------------- */
@@ -255,6 +259,9 @@ footer h1 {
 .footerclass section {
     text-align: center;
     margin-top: 2.5em;
+    display: block;
+    position: relative;
+    height: auto;
 }
 
 .p1 {
@@ -554,3 +561,79 @@ label {
   .addProdForm input[type="text"], .addProdForm input[type="password"], textarea {color: #999; font-family: verdana, sans-serif}
   .addProdForm input[type="submit"] {clear: both; margin-left: 220px; width: 220px;}
   .addProdForm select {width: 220px;}
+
+
+/* admin dashboard area------------------------------------------------------------------         */
+.adminDiv{
+    position: relative;
+    top: 40%;
+}
+
+.admin p{
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    background-color: #137de0; 
+    border-radius: 20px; 
+    padding: 15px; 
+}
+
+.admin h1{
+    display: flex;
+    justify-content: center;
+}
+
+.admin a{
+    display: flex;
+    justify-content: center;
+}
+
+.admin blockquote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin blockquote a{
+    color: #000000;
+    align-items: center;
+    margin-left: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: gainsboro;
+    height: 25px;
+    width: 40px;
+}
+
+.addCatButton{
+    display: flex;
+    justify-content: center;
+}
+
+.addCatButton input{
+    background-color: #bfbfbf;
+    border: none;
+    border-radius: 20px;
+    width: 20em;
+    height: 3em;
+    font-size: 1.2em;
+}
+
+.deleteCat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.deleteCat #deletebtn{
+    border: none;
+    border-radius: 10px;
+    background-color: palevioletred;
+    height: 25px;
+    width: 5em;
+}
+
+.adminBack{
+    color: #000000;
+}
