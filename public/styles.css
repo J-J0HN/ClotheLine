@@ -225,16 +225,14 @@ main {
 }
 
 .popitems {
-    font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif;
-    font-size: medium;
-    display: inline;
-    text-align: center;
-    margin: 2em;
-    padding: 1em;
-    border: 2px solid #1a4570;
-    border-radius: 5px;
-    color: #1a4570;
+  font-family: Segoe UI, 'Tahoma', Geneva, Verdana, sans-serif;
+  font-size: medium;
+  /* position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
+
 
 /* footer section ----------------------------------------------------------------------------------------------------------------------------------------- */
 

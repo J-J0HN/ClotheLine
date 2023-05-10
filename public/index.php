@@ -18,5 +18,16 @@ $output = loadTemplate('../templates/index.html.php', [
     'banners' => $banners
 ]);
 
+$stmt = $pdo->prepare('SELECT * FROM clotheline.product LIMIT 2');
+$stmt->execute();
+while ($row = $stmt->fetch()) {
+    $prodid = $row['prodid'];
+    $prodname = $row['prodname'];
+    $prodprice = $row['prodprice'];
+    $category = $row['category'];
+    $prodimg = $row['prodimg'];
+    echo '<img src="' . $prodimg . '" alt="' . $prodname . '">';
+}
+
 require '../templates/mainTemp.html.php';
 ?>
