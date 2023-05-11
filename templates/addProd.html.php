@@ -1,3 +1,4 @@
+<div class="form-container">
 <form action="" method="post" class="loginform" enctype="multipart/form-data">
     <input type="hidden" name="prod[prodid]" value="<?=isset($prod['prodid'])? $prod['prodid'] : '' ?>">
 
@@ -33,8 +34,8 @@
 
 				<label>Product Image</label>
     <?php if(isset($prod['prodimg'])): ?>
-        <p>Current File Name: <?=$prod['prodimg']?></p>
         <img src="<?=$prod['prodimg']?>" alt="Product Image" style="width: 244px;height: 244px;">
+        <p>Current File Name: <?=$prod['prodimg']?></p>
         <input type="checkbox" name="use_current_image" id="use_current_image" value="1">
         <label for="use_current_image">Use current image</label>
     <?php endif; ?>
@@ -42,3 +43,4 @@
 
     <input type="submit" name="submit" value="Add" style="margin: 1em;"/>
 </form>
+	</div>
