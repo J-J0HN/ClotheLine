@@ -2,7 +2,7 @@
   <h1>Login</h1>
 </div>
 <div class="form-container">
-  <form action="" method="POST" class="loginform">
+  <form action="login.php" method="POST" class="loginform">
 
     <label for="email">Email:</label>
     <input type="email" name="email" id="email" placeholder="Enter your email" required>

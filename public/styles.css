@@ -154,7 +154,7 @@ nav ul ul li:hover {
 }
 
 
-/* Image Slider at index*/
+/* Image Slider at index---------------------------------------------------------------------------------------- */
 
 .slider-container {
     width: 100%;
@@ -474,10 +474,6 @@ footer button[type="submit"] {
     margin: 1.5em 0;
   }
   
-  .single-product .prodimage {
-    width: 100%;
-  }
-  
   .single-product .prodname {
     margin-top: 0.5em;
     margin-bottom: 0.3em;
@@ -675,7 +671,7 @@ label {
   .addProdForm select {width: 220px;}
 
 
-/* admin dashboard area------------------------------------------------------------------         */
+/* admin dashboard area and other admin stuff------------------------------------------------------------------         */
 .adminDiv{
     position: relative;
     top: 25%;
@@ -803,4 +799,9 @@ label {
     background-color: gainsboro;
     height: 25px;
     width: 40px;
+  }
+  .adminProd section{
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 1em;
   }
