@@ -19,6 +19,10 @@
     <h3 class="prodname"><?=$product['prodname']?></h3>
     <p class="prodprice">£<?=$product['prodprice']?></p>
     <a href="admin.php?id=<?=$product['prodid']?>"><p>Edit</p></a>
+    <form action="deleteProd.php" method="post" class='deleteCat'>
+		<input type="hidden" name="prodid" value="<?=$product['prodid']?>">
+		<input type="submit" value="Delete" name = "delete" id="deletebtn">
+	</form>
     </div>
     <?
     }
