@@ -771,4 +771,5 @@ label {
   .adminProd section{
     display: inline-flex;
     justify-content: center;
+    margin-top: 1em;
   }
