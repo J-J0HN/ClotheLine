@@ -18,5 +18,31 @@ $output = loadTemplate('../templates/index.html.php', [
     'banners' => $banners
 ]);
 
+// Retrieve latest 2 product IDs
+$stmt = $pdo->prepare('SELECT * FROM clotheline.product ORDER BY prodid DESC LIMIT 2');
+$stmt->execute();
+
+$popularItemHtml = '';
+while ($row = $stmt->fetch()) {
+    $prodid = $row['prodid'];
+    $prodname = $row['prodname'];
+    $prodprice = $row['prodprice'];
+    $category = $row['category'];
+    $prodimg = $row['prodimg'];
+
+    $popularItemHtml .= '<div class="popular-item">';
+    $popularItemHtml .= '<img src="' . $prodimg . '" alt="' . $prodname . '">';
+    $popularItemHtml .= '<h4>' . $prodname . '</h4>';
+    $popularItemHtml .= '</div>';
+}
+
+
+// Load template with banner images and popular items
+$output = loadTemplate('../templates/index.html.php', [
+    'banners' => $banners,
+    'popularItemsHtml' => $popularItemHtml
+]);
+
+
 require '../templates/mainTemp.html.php';
 ?>

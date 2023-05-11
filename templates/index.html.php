@@ -13,3 +13,8 @@
         </div>
     </div>
 </div>
+
+<h3 class="popitems">POPULAR ITEMS</h3>
+<div class="popular-items">
+    <?= $popularItemsHtml ?>
+</div>
