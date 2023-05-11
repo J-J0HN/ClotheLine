@@ -7,10 +7,6 @@
             <img class="banner-img" src="<?=isset($banners[3]) ? $banners[3] : ""?>" alt="Fourth image">
             <img class="banner-img" src="<?=isset($banners[4]) ? $banners[4] : ""?>" alt="Fifth image">
         </div>
-        <div class="controls">
-            <button class="prev"><</button>
-            <button class="next">></button>
-        </div>
     </div>
 </div>
 
