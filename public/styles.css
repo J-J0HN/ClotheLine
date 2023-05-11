@@ -180,36 +180,6 @@ nav ul ul li:hover {
   object-fit: cover;
 }
 
-<<<<<<< HEAD
-=======
-.controls {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.prev,
-.next {
-  background-color: #1a4570;
-  opacity: 0.6;
-  color: #fff;
-  border: none;
-  padding: 1em 2em;
-  margin-right: 1em;
-  cursor: pointer;
-}
-
-.prev:hover,
-.next:hover {
-  opacity: 0.3;
-}
-
-.prev:active,
-.next:active {
-  opacity: 0.1;
-}
->>>>>>> a5fedf43a8274f5ca067614f1aee8237ca4e00de
 
 /* main section ----------------------------------------------------------------------------------------------------------------------------------------- */
 main {
