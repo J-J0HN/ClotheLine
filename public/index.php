@@ -31,8 +31,10 @@ while ($row = $stmt->fetch()) {
     $prodimg = $row['prodimg'];
 
     $popularItemHtml .= '<div class="popular-item">';
-    $popularItemHtml .= '<img src="' . $prodimg . '" alt="' . $prodname . '">';
-    $popularItemHtml .= '<h4>' . $prodname . '</h4>';
+    $popularItemHtml .= '<a href="#"><img src="' . $prodimg . '" alt="' . $prodname . '"></a>';
+    $popularItemHtml .= '<a href="#"><h4>' . $prodname . '</h4></a>';
+    $popularItemHtml .= '<p>' . '£' . $prodprice . '</p>';
+    $popularItemHtml .= '<a href="#" class="add-to-basket-btn">Add to basket</a>';
     $popularItemHtml .= '</div>';
 }
 
