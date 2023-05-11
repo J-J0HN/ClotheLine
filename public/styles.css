@@ -441,10 +441,6 @@ footer button[type="submit"] {
     margin: 1.5em 0;
   }
   
-  .single-product .prodimage {
-    width: 100%;
-  }
-  
   .single-product .prodname {
     margin-top: 0.5em;
     margin-bottom: 0.3em;
