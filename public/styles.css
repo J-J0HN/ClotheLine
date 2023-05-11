@@ -44,6 +44,7 @@ nav>ul>li {
     position: relative;
     font-size: small;
     height: 0;
+    padding-left: 2em;
 }
 
 nav ul ul {
