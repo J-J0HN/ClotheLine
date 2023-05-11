@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<h3 class="popitems">NEW ITEMS</h3>
+<h3 class="popitems">LATEST ITEMS</h3>
 <div class="popular-items">
     <?= $popularItemsHtml ?>
 </div>

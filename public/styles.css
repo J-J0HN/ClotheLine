@@ -37,7 +37,7 @@ nav ul {
     grid-template-columns: repeat(17, 1fr);
     text-align: center;
     position: relative;
-    left: 5em;
+    left: 10em;
 }
 
 nav>ul>li {
