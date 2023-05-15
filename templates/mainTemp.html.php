@@ -43,7 +43,7 @@
                 <a href="index.php"class="logolink"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
                 <li></li>
                 <li></li>
-                <form action="/search" method="get" class="searchbar">
+                <form action="category.php" method="get" class="searchbar">
                     <input type="text" name="q" placeholder="Search..." class="searchbar">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
