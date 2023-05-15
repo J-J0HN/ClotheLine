@@ -47,7 +47,7 @@
                     <input type="text" name="q" placeholder="Search..." class="searchbar">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-                <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
+                <a href="bag.php"><img src="cart.png" alt="Cart" class="cart"></a>
                 <li>
                     <a href="login.php" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon">
                         <ul>
