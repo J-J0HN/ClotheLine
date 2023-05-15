@@ -7,7 +7,7 @@
                 <h3 class="product-title"><?=$item['prodname']?></h3>
                 <p class="product-price">£<?=$item['prodprice']?></p>
             </header>
-            <form class="product-card-inputs" action="/bag/items" method="POST">
+            <form class="product-card-inputs" action="bag.php" method="POST">
                 <select name="item[size]" id="product-size">
                     <option value="">--Choose a size--</option>
                     <option value="XS" class="">Extra Small</option>
