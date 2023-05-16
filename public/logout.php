@@ -1,5 +1,5 @@
 <?php
+session_start();
 session_unset();
-header("Location: login.php"); // Redirect to login page after logout
-
+header("Location: login.php");
 ?>
