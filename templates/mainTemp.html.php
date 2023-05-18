@@ -43,30 +43,30 @@
                 <a href="index.php"class="logolink"><img src="ClotheLineLogoColour.jpeg" alt="Logo" class ="logo"></a>
                 <li></li>
                 <li></li>
-                <form action="/search" method="get" class="searchbar">
+                <form action="category.php" method="get" class="searchbar">
                     <input type="text" name="q" placeholder="Search..." class="searchbar">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-                <a href="cart.php"><img src="cart.png" alt="Cart" class="cart"></a>
+                <a href="bag.php"><img src="cart.png" alt="Cart" class="cart"></a>
                 <li>
-                    <a href="login.php" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon">
+                    <a href="login.php" class="acc"><img src="acc.png" alt="Account" width="33vw" height="33vw" class="icon"></a>
                         <ul>
                         <?php
-                    if (isset($_SESSION['username'])) {
-                        echo "<li><a href='#'>" . $_SESSION['username'] . "</a></li>";
-                        echo "<li><a href='logout.php'>Log out</a></li>";
+                    if (isset($_SESSION['login'])) {
+                        echo '<li>' . $_SESSION['username'] . '</li>';
+                        echo '<li><a href="logout.php">Log out</a></li>';
                         if($_SESSION['admin']>0){
                             echo '<li><a href="adminDash.php">Admin</a></li>';
                         }
                         echo '<li><a href="Account.php">Account</a></li>';
 
                     } else {
-                        echo "<li><a href='login.php'>Log-in</a></li>";
-                        echo "<li><a href='register.php'>Sign-up</a></li>";
+                        echo '<li><a href="login.php">Log-in</a></li>';
+                        echo '<li><a href="register.php">Sign-up</a></li>';
                     }
                 ?>
                     </ul>
-                </a>
+                </li>
     </nav>
     <main class="<?=$mainClass?>">
         <?=$output?>

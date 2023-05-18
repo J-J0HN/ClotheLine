@@ -9,25 +9,21 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $users = find($pdo, 'user', 'email', $email);
+    $user = find($pdo, 'user', 'email', $email)[0];
 
-    foreach ($users as $user) {
-        if ($user['password'] == $password) {
-            session_start();
-            $_SESSION['login'] = $user['userid'];
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['admin'] = $user['admin'];
-            header("Location: index.php");
-            exit;
-        }
+    if ($user['password'] == $password) {
+        session_start();
+        $_SESSION['login'] = $user['userid'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['admin'] = $user['admin'];
+        header("Location: index.php");
     }
 }
 
 
 $templateVars = [
-    'title' => $title,
-    'loggedIn' => isset($_SESSION['login']),
+    'title' => $title
 ];
 
-$output = loadTemplate('../templates/Login.html.php', $templateVars);
+$output = loadTemplate('../templates/login.html.php', $templateVars);
 require '../templates/mainTemp.html.php';

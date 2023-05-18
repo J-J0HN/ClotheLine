@@ -55,6 +55,40 @@ function find($pdo, $table, $field, $value){
 
 }
 
+function findLike($pdo, $table, $field, $value){
+    $stmt = $pdo->prepare('SELECT * FROM ' . $table .' WHERE ' . $field . ' LIKE :value');
+    $values = [
+        'value'=>'%' . $value . '%'
+    ];
+
+    $stmt->execute($values);
+
+    return $stmt->fetchAll();
+
+}
+
+function findWithParams($pdo, $table, $params) {
+    $whereClauses = array();
+  
+    foreach ($params as $key => $value) {
+      if ($value != '') {
+        array_push($whereClauses, $key . ' = :' . $key);
+      }
+    }
+  
+    $sql = 'SELECT * FROM ' . $table;
+    if (!empty($whereClauses)) {
+      $sql .= ' WHERE ' . implode(' AND ', $whereClauses);
+    }
+  
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($params);
+  
+    return $stmt->fetchAll();
+  }
+
+  
+
 function delete($pdo, $table, $field, $id) {
 	$stmt = $pdo->prepare('DELETE FROM ' . $table . ' WHERE ' .$field.' = :id');
 	$criteria = [
