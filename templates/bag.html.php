@@ -24,7 +24,7 @@
     <section class="bag-summary">
         <h2 class="bag-title">Order Summary</h2>
         <hr>
-        <form action="checkout.php" class="to-checkout">
+        <form action="" class="to-checkout">
             <section class="bag-summary-prices">
                 <p class="bag-sub-total"><span>Subtotal:</span> <span>£<?=$subtotal?></span></p>
                 <p class="bag-shipping"><span>Shipping:</span> <span><strong>FREE</strong></span></p>
