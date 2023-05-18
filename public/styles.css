@@ -576,7 +576,6 @@ a.back-home {
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
   .user-table {
     border-collapse: collapse;
     border: 1px solid black;
@@ -587,7 +586,7 @@ a.back-home {
     padding: 5px;
   }
   
-  .container {
+  .container-user {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
@@ -610,13 +609,6 @@ a.back-home {
   .button:hover {
     background-color: #0056b3;
   }
-=======
-.left ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
->>>>>>> a5fedf43a8274f5ca067614f1aee8237ca4e00de
 
 .left ul li {
   margin-bottom: 15px;
