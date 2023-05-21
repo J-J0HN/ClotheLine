@@ -5,6 +5,7 @@ if(session_id() == '') {
     require '../functions.php';
 }
 $mainClass='bag';
+$title='My Bag';
 
 if(isset($_POST['item'])){
     $item = $_POST['item'];
