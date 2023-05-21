@@ -1,6 +1,7 @@
 <h2 class="checkout-title">Checkout</h2>
 <section class="form-container">
-    <form action="checkout.php" method="post" class="loginform">
+    <form action="order_confirmation.php" method="post" class="loginform">
+        <input type="hidden" name="totalPrice" value="<?=$pricetag?>">
             <h3 class="section-title">Delivery Details</h3>
             <label for="delivery_add_street">Street:</label>
             <input type="text" name="delivery_add_street" id="delivery_add_street" required>
@@ -24,6 +25,6 @@
             <h3 class="section-title">Contact Details</h3>
             <label for="phone_number">Phone Number:</label>
             <input type="text" name="phone_number" id="phone_number" required>
-        <input type="submit" value="Place Order" class="checkout-btn">
+        <input type="submit" value="Place Order" name="submit" class="checkout-btn">
     </form>
 </section>
