@@ -22,23 +22,21 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
     }
 
     $values = [
-        'prodid'=>$prodid,
+        'prodid' => $prodid,
         'delivery_add_street' => $_POST['delivery_add_street'],
         'delivery_add_county' => $_POST['delivery_add_county'],
         'delivery_add_postcode' => $_POST['delivery_add_postcode'],
         'delivery_add_country' => $_POST['delivery_add_country'],
-        'price'=>$totalprice,
+        'price' => $totalprice,
         'card_name' => $_POST['card_name'],
         'card_number' => $_POST['card_number'],
         'card_exp_date' => $_POST['card_exp_date'],
         'card_cvv' => $_POST['card_cvv'],
         'phone_number' => $_POST['phone_number'],
-        'userid'=>$_SESSION['login']
+        'userid' => $_SESSION['login']
     ];
 
-
-
-    $result = insert($pdo, 'order', $values);
+    $result = insert($pdo, '`order`', $values);
 
     if ($result) {
         $_SESSION['bag'] = [];
@@ -47,13 +45,10 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
         // Error occurred while inserting the order details
         echo "An error occurred while placing the order.";
     }
-}else{
-
+} else {
     $output = loadTemplate('../templates/checkout.html.php', []);
-
 }
 
-$output=loadTemplate('../templates/orderconfirmation.html.php', []);
-
+$output = loadTemplate('../templates/orderconfirmation.html.php', []);
 require '../templates/mainTemp.html.php';
 ?>
