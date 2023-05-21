@@ -4,7 +4,6 @@ require '../pdo.php';
 require '../functions.php';
 
 if (!isset($_SESSION['login'])) {
-    // Redirect the user to the login page if not logged in
     header('Location: login.php');
     exit();
 }
@@ -20,11 +19,9 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
     $card_cvv = $_POST['card_cvv'];
     $phone_number = $_POST['phone_number'];
 
-    // Get user ID from session
-    $userid = $_SESSION['userid'];
+    $userid = $_SESSION['login'];
 
-    // Insert order details into the order table
-    $query = "INSERT INTO `order` (prodid, delivery_add_street, delivery_add_county, delivery_add_postcode, delivery_add_country, price, quantity, card_name, card_number, card_exp_date, card_cvv, phone_number, billing_add_house_number, billing_add_street, billing_add_county, billing_add_postcode, billing_add_country, delivery_add_house_number, userid) VALUES ";
+    $query = "INSERT INTO 'order' (prodid, delivery_add_street, delivery_add_county, delivery_add_postcode, delivery_add_country, price, quantity, card_name, card_number, card_exp_date, card_cvv, phone_number, billing_add_house_number, billing_add_street, billing_add_county, billing_add_postcode, billing_add_country, delivery_add_house_number, userid) VALUES ";
 
     foreach ($_SESSION['bag'] as $item) {
         $prodid = $item['prodid'];
@@ -62,3 +59,9 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
     header('Location: checkout.html.php');
     exit();
 }
+
+
+
+$output = loadTemplate('../templates/checkout.html.php', []);
+
+require '../templates/mainTemp.html.php';
