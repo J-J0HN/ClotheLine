@@ -13,12 +13,6 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
         $prodid = $item['prodid'];
         $totalprice = $_POST['totalPrice'];
         $quantity = $item['quantity'];
-        /* $billing_add_house_number = $item['billing_add_house_number'];
-        $billing_add_street = $item['billing_add_street'];
-        $billing_add_county = $item['billing_add_county'];
-        $billing_add_postcode = $item['billing_add_postcode'];
-        $billing_add_country = $item['billing_add_country'];
-        $delivery_add_house_number = $item['delivery_add_house_number']; */    
     }
 
     $values = [
