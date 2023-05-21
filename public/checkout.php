@@ -14,6 +14,7 @@ if (isset($_SESSION['bag'])){
     $subtotal = 0;
     for ($i=0; $i < count($_SESSION['bag']); $i++){
         $bag[$i] = find($pdo, 'product', 'prodid', $_SESSION['bag'][$i]['prodid'])[0];
+        $bag[$i]['size'] = $_SESSION['bag'][$i]['size'];
         $subtotal += $bag[$i]['prodprice'];
     }
 
@@ -70,7 +71,7 @@ if(isset($_POST['submit'])){
         }
     }else{
 
-        $output = loadTemplate('../templates/checkout.html.php', []);
+        $output = loadTemplate('../templates/checkout.html.php', $templateVars);
 
     }
 }
