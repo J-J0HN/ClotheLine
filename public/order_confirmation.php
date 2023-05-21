@@ -41,9 +41,6 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
     if ($result) {
         $_SESSION['bag'] = [];
         exit();
-    } else {
-        // Error occurred while inserting the order details
-        echo "An error occurred while placing the order.";
     }
 } else {
     $output = loadTemplate('../templates/checkout.html.php', []);
