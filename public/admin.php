@@ -8,7 +8,7 @@ $title = 'Product Add';
 if (isset($_GET['id'])){
     $prod = find($pdo, 'product', 'prodid', $_GET['id'])[0];
     if (isset($prod['prodimg'])) {
-        $prod['prodimg'] = basename($prod['prodimg']); // Extract the file name from the path
+        $prod['prodimg'] = basename($prod['prodimg']); 
     }
 }else{
     $prod = false;
@@ -23,14 +23,12 @@ if (isset($_POST['submit'])) {
     $targetFile = $targetDirectory . $newFileName;
 
     if (!empty($_FILES['prod']['tmp_name']['prodimg'])) {
-        // A new file has been selected, upload it and set the new filename
         if (move_uploaded_file($_FILES['prod']['tmp_name']['prodimg'], $targetFile)) {
             $_POST['prod']['prodimg'] = $newFileName;
         } else {
             echo 'Failed to upload file.';
         }
     } elseif (isset($_POST['use_current_image']) && $_POST['use_current_image'] == 'on' && isset($prod['prodimg'])) {
-        // Use the current image, set the filename to the existing filename
         $_POST['prod']['prodimg'] = $prod['prodimg'];
     }
 
