@@ -586,7 +586,7 @@ a.back-home {
     padding: 5px;
   }
   
-  .container {
+  .container-user {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;

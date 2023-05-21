@@ -32,9 +32,9 @@ while ($row = $stmt->fetch()) {
 
     $popularItemHtml .= '<div class="popular-item">';
     $popularItemHtml .= '<a href="product.php?id=' . $prodid . '"><img src="' . $prodimg . '" alt="' . $prodname . '"></a>';
-    $popularItemHtml .= '<a href="#"><h4>' . $prodname . '</h4></a>';
+    $popularItemHtml .= '<a href="product.php?id=' . $prodid . '"><h4>' . $prodname . '</h4></a>';
     $popularItemHtml .= '<p>' . '£' . $prodprice . '</p>';
-    $popularItemHtml .= '<a href="#" class="add-to-basket-btn">Add to basket</a>';
+    $popularItemHtml .= '<a href="product.php?id=' . $prodid . '" class="add-to-basket-btn">Add to basket</a>';
     $popularItemHtml .= '</div>';
 }
 
