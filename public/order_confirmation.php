@@ -38,14 +38,11 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
 
 
 
-    $result = insert($pdo, 'order', $values);
+    $result=insert($pdo, '`order`', $values);
 
     if ($result) {
         $_SESSION['bag'] = [];
         exit();
-    } else {
-        // Error occurred while inserting the order details
-        echo "An error occurred while placing the order.";
     }
 }else{
 
