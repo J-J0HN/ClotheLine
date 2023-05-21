@@ -973,3 +973,12 @@ hr {
   height: 0.03em;
   opacity: 0.3;
 }
+
+
+
+.checkout-title{
+  justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 2em;
+}

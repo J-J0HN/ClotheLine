@@ -1,8 +1,6 @@
-<section class="checkout-page">
-    <h2 class="checkout-title">Checkout</h2>
-    <hr>
-    <form action="checkout.php" method="post" class="checkout-form">
-        <section class="delivery-details">
+<h2 class="checkout-title">Checkout</h2>
+<section class="form-container">
+    <form action="checkout.php" method="post" class="loginform">
             <h3 class="section-title">Delivery Details</h3>
             <label for="delivery_add_street">Street:</label>
             <input type="text" name="delivery_add_street" id="delivery_add_street" required>
@@ -26,7 +24,6 @@
             <h3 class="section-title">Contact Details</h3>
             <label for="phone_number">Phone Number:</label>
             <input type="text" name="phone_number" id="phone_number" required>
-        </section>
         <input type="submit" value="Place Order" class="checkout-btn">
     </form>
 </section>

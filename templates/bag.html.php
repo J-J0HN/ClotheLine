@@ -24,14 +24,15 @@
     <section class="bag-summary">
         <h2 class="bag-title">Order Summary</h2>
         <hr>
-        <form action="checkout.php" class="to-checkout">
+        <form action="checkout.php" class="to-checkout" method="post">
             <section class="bag-summary-prices">
                 <p class="bag-sub-total"><span>Subtotal:</span> <span>£<?=$subtotal?></span></p>
                 <p class="bag-shipping"><span>Shipping:</span> <span><strong>FREE</strong></span></p>
                 <p class="bag-location">Delivering to <strong>United Kingdom</strong></p>
             </section>
             <hr>
-            <p class="bag-total-price" name="totalPrice"><span>Total:</span> <span><strong>£<?=$subtotal?></strong></span></p>
+                <p class="bag-total-price"><span>Total:</span> <span><strong>£<?=$subtotal?></strong></span></p>
+                <input type="hidden" name="totalPrice" value="<?=$subtotal?>">
             <input type="submit" name = "submit" value="Checkout">
         </form>
     </section>
