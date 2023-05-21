@@ -31,8 +31,8 @@
                 <p class="bag-location">Delivering to <strong>United Kingdom</strong></p>
             </section>
             <hr>
-            <p class="bag-total-price"><span>Total:</span> <span><strong>£<?=$subtotal?></strong></span></p>
-            <input type="submit" value="Checkout">
+            <p class="bag-total-price" name="totalPrice"><span>Total:</span> <span><strong>£<?=$subtotal?></strong></span></p>
+            <input type="submit" name = "submit" value="Checkout">
         </form>
     </section>
 </section>
