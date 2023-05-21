@@ -75,10 +75,11 @@
         <section class="p1">
         <h1 class="socials">OUR SOCIALS</h1>
         <div class="social-links">
-            <a href="#"><img src="fb.png" alt="FaceBook" class ="facebook"></a>
-            <a href="#"><img src="twt.png" alt="Twitter" class ="twitter"></a>
-            <a href="#"><img src="pin.png" alt="Pinterest" class ="pinterest"></a>
-            <a href="#"><img src="insta.png" alt="Instagram" class ="instagram"></a>
+        <a href="https://www.facebook.com"><img src="fb.png" alt="FaceBook" class="facebook"></a>
+        <a href="https://www.twitter.com"><img src="twt.png" alt="Twitter" class="twitter"></a>
+        <a href="https://www.pinterest.com"><img src="pin.png" alt="Pinterest" class="pinterest"></a>
+        <a href="https://www.instagram.com"><img src="insta.png" alt="Instagram" class="instagram"></a>
+
         </div>
         </section>
 
