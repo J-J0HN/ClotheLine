@@ -8,6 +8,21 @@ if (!isset($_SESSION['login'])) {
     exit();
 }
 
+if (isset($_SESSION['bag'])){
+    $subtotal = 0;
+    for ($i=0; $i < count($_SESSION['bag']); $i++){
+        var_dump($_SESSION['bag'][$i]);
+        $bag[$i] = find($pdo, 'product', 'prodid', $_SESSION['bag'][$i]['prodid'])[0];
+        $subtotal += $bag[$i]['prodprice'];
+    }
+    echo $subtotal;
+
+    $templateVars= [
+        'bag' => $bag,
+        'subtotal' => $subtotal
+    ];
+}
+
 if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county']) && isset($_POST['delivery_add_postcode']) && isset($_POST['delivery_add_country']) && isset($_POST['card_name']) && isset($_POST['card_number']) && isset($_POST['card_exp_date']) && isset($_POST['card_cvv']) && isset($_POST['phone_number'])) {
     $delivery_add_street = $_POST['delivery_add_street'];
     $delivery_add_county = $_POST['delivery_add_county'];
@@ -62,6 +77,6 @@ if (isset($_POST['delivery_add_street']) && isset($_POST['delivery_add_county'])
 
 
 
-$output = loadTemplate('../templates/checkout.html.php', []);
+$output = loadTemplate('../templates/checkout.html.php', $templateVars);
 
 require '../templates/mainTemp.html.php';
